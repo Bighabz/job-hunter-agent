@@ -1,0 +1,47 @@
+# ============================================================
+# PERSONAL DATA — never commit (this repo is public)
+# ============================================================
+
+# Your real profile, resume, and cover letters
+master/profile.md
+master/resume.md
+master/resume.pdf
+master/resume.docx
+master/resume.html
+master/cover_letter_generic.md
+
+# Every application you've ever submitted (companies, notes, tailored resumes)
+applications/
+
+# Local credentials (Supabase URL/keys, etc.)
+supabase/connection.local.md
+*.local.md
+
+# Backup of the old (private) git history — never commit
+.git.private-backup/
+
+# ============================================================
+# Secrets / local config
+# ============================================================
+.env
+.env.local
+*.local
+.claude/settings.local.json
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ============================================================
+# OS / editors
+# ============================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
