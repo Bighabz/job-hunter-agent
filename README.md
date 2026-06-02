@@ -65,7 +65,7 @@ This is the connector that lets the agent drive your real browser (your logins, 
 2. In the SQL editor, run `supabase/migration.sql`, then `supabase/migration_v2_favorites_analytics.sql`.
 3. Copy your project URL and publishable (anon) key into `supabase/connection.local.md`:
    ```markdown
-   # Supabase Connection (LOCAL ONLY — gitignored, never commit)
+   # Supabase Connection (LOCAL ONLY - gitignored, never commit)
    - Project URL: https://YOUR-PROJECT.supabase.co
    - Anon (publishable) Key: sb_publishable_XXXX
    ```
