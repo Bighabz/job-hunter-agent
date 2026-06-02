@@ -12,8 +12,8 @@
 
 ## Certifications & Licenses
 
-- **[Certification]** — Active
-- **[Certification]** — Active
+- **[Certification]** - Active
+- **[Certification]** - Active
 
 ---
 
@@ -29,14 +29,14 @@
 
 ## Experience
 
-### [Job Title] — [Company]
-*[Start] – [End or Present]*
+### [Job Title] - [Company]
+*[Start] - [End or Present]*
 
 - [Accomplishment bullet with metric]
 - [Accomplishment bullet with metric]
 
-### [Job Title] — [Company]
-*[Start] – [End]*
+### [Job Title] - [Company]
+*[Start] - [End]*
 
 - [Accomplishment bullet]
 
@@ -51,6 +51,6 @@
 
 ## Education
 
-**[Degree] — [University]**
+**[Degree] - [University]**
 *[Graduation date]*
 [Honors, GPA if strong, relevant coursework]

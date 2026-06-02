@@ -1,4 +1,4 @@
-# Master Profile — [Your Name]
+# Master Profile - [Your Name]
 
 > This is the single source of truth for all resume/cover letter generation.
 > Copy this file to `master/profile.md` (gitignored), fill it in, and keep it updated
@@ -26,7 +26,7 @@
 
 ## Professional Experience
 
-**[Job Title] — [Company]**
+**[Job Title] - [Company]**
 - [Dates]
 - [Specific duties, metrics, accomplishments]
 
@@ -57,7 +57,7 @@
 
 ## Truthful Years-of-Experience Answers
 
-> Screening questions ask "how many years of X?" — pre-decide truthful answers so the
+> Screening questions ask "how many years of X?" - pre-decide truthful answers so the
 > agent never inflates. List the tools/skills you get asked about and your honest number.
 
 | Skill / Tool | Years |

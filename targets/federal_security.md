@@ -1,4 +1,4 @@
-# Target Archetype: Armed Security Officer — Federal
+# Target Archetype: Armed Security Officer - Federal
 
 ## Priority Keywords
 - Armed security officer
@@ -15,14 +15,14 @@
 - De-escalation
 - Law enforcement liaison
 
-## Licenses to Emphasize (Critical — These Are Requirements)
-1. PC 832 (Arrest & Firearms) — usually mandatory for CA federal contracts
-2. BSIS Guard Card — baseline requirement
-3. Exposed Firearms Permit — armed post requirement
+## Licenses to Emphasize (Critical - These Are Requirements)
+1. PC 832 (Arrest & Firearms) - usually mandatory for CA federal contracts
+2. BSIS Guard Card - baseline requirement
+3. Exposed Firearms Permit - armed post requirement
 4. Any firearms qualifications scores (if documented)
 
 ## Certifications to Include
-- CompTIA Security+ (differentiator — shows cybersecurity awareness for federal facilities)
+- CompTIA Security+ (differentiator - shows cybersecurity awareness for federal facilities)
 - ISC2 CC (same angle)
 - First Aid / CPR (if current)
 
@@ -41,14 +41,14 @@
 - Software development (omit)
 
 ## Section Order (Resume)
-1. Summary — emphasize armed security, federal readiness, licenses
+1. Summary - emphasize armed security, federal readiness, licenses
 2. Licenses & Certifications (FRONT AND CENTER)
 3. Security Experience (armed roles first)
 4. Education
-5. Additional Skills (brief — IT/cyber as bonus)
+5. Additional Skills (brief - IT/cyber as bonus)
 
 ## Cover Letter Angle
-- Disciplined, trained, licensed — ready for federal post requirements
+- Disciplined, trained, licensed - ready for federal post requirements
 - Unique cyber + physical security combination
 - Commitment to professionalism (education while working full-time armed posts)
 - Availability and reliability
@@ -63,6 +63,6 @@
 - "Clearance?" → No active clearance, willing to obtain / eligible
 
 ## Contractor Notes
-- Paragon Systems — major FPS contractor
-- Inter-Con Security — also federal contracts
-- These roles often have rigid post order compliance — emphasize rule-following, reliability
+- Paragon Systems - major FPS contractor
+- Inter-Con Security - also federal contracts
+- These roles often have rigid post order compliance - emphasize rule-following, reliability

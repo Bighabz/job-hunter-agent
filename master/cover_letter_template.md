@@ -18,7 +18,7 @@ Habib [Last Name]
 
 Dear {{HIRING_MANAGER_NAME_OR_HIRING_MANAGER}},
 
-**Paragraph 1 — Hook + Role Connection**
+**Paragraph 1 - Hook + Role Connection**
 {{OPENING}}
 <!-- 
 Guidelines:
@@ -28,7 +28,7 @@ Guidelines:
 - If you have a referral, name-drop here
 -->
 
-**Paragraph 2 — Experience Match**
+**Paragraph 2 - Experience Match**
 {{EXPERIENCE_MATCH}}
 <!--
 Guidelines:
@@ -38,18 +38,18 @@ Guidelines:
 - Emphasize the most relevant: security ops, AI/automation, armed security, or research
 -->
 
-**Paragraph 3 — Differentiator**
+**Paragraph 3 - Differentiator**
 {{DIFFERENTIATOR}}
 <!--
 Guidelines:
 - What makes you uniquely qualified beyond the checklist
 - Origin story angle (cybersecurity career born from real-world phishing experience)
-- The AI + cybersecurity intersection — few candidates have both
+- The AI + cybersecurity intersection - few candidates have both
 - Capstone/ClaWD if relevant to the role
 - Certifications stack if competitive advantage
 -->
 
-**Paragraph 4 — Close**
+**Paragraph 4 - Close**
 {{CLOSING}}
 <!--
 Guidelines:
