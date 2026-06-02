@@ -76,15 +76,37 @@ This is the connector that lets the agent drive your real browser (your logins, 
    ```
    Without it, the agent falls back to the PostgREST REST API via curl, which works fine.
 
-### 4. Your personal data (all gitignored)
+### 4. Your personal data: start with a conversation (all gitignored)
 
-```bash
-cp master/profile.template.md master/profile.md      # fill in everything
-cp master/resume.template.md master/resume.md        # your real resume
-python scripts/generate_pdf.py master/resume.md      # render resume.pdf
+Don't fill in the templates by hand. **The best way to bootstrap the system is a conversation with Claude.** Open Claude Code in this folder and say something like:
+
+```
+> I want you to be my job application agent. Interview me so you can build my
+> profile and resume. I'm targeting [SOC analyst / cloud engineer / data
+> engineer / ...] roles, remote, around $XX,000.
 ```
 
-The profile includes a **truthful years-of-experience table**. Pre-decide honest answers for every tool you get screened on so the agent never inflates. Lying on screeners is a hard no; it also gets you auto-rejected when they check.
+Claude will interview you: education, every job you've held (with real dates and duties), certifications, projects, tools you've actually used and for how long, salary floor, location constraints, clearance status, and what kinds of roles you do NOT want. From that conversation it writes:
+
+- `master/profile.md`: the single source of truth about you (gitignored)
+- `master/resume.md` + `resume.pdf`: your master resume (gitignored)
+- The skip rules and screening answers it will use on every application
+
+**Be brutally honest in this conversation.** The profile includes a truthful years-of-experience table; pre-deciding honest answers for every tool you get screened on is what lets the agent apply at volume without ever inflating. Lying on screeners is a hard no; it also gets you auto-rejected when they check.
+
+The more context you give here (what you want, what you hate, which past job titles undersell what you actually did), the better every downstream application gets. This conversation is the highest-leverage 20 minutes in the whole setup.
+
+### 4b. One resume per job (tailoring)
+
+The master resume is the baseline, not what gets submitted everywhere. For roles worth the effort, ask:
+
+```
+> Tailor a resume and cover letter for this JD: [paste URL or text]
+```
+
+The agent reads the JD, picks the matching archetype from `targets/`, reorders and rewrites bullets to front-load relevant experience, matches keywords naturally (no stuffing), renders a fresh PDF, and saves everything to `applications/{Company}_{Role}_{date}/`. Every tailored resume is kept, so the system learns from past versions (the ones that got interviews become the gold standard for future tailoring).
+
+For high-volume Easy Apply runs, the master resume is used as-is; tailoring is reserved for strong-fit roles where it moves the needle.
 
 ### 5. PDF rendering
 
