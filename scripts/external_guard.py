@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 APPS = Path(os.environ.get('JOBHUNT_APPLICATIONS', str(HERE.parent / 'applications')))
-POLICY = Path(os.environ.get('JOBHUNT_POLICY', str(HERE / 'external_policy.json')))
+POLICY = HERE / 'external_policy.json'
 
 
 def key(url):
@@ -219,7 +219,7 @@ def validate_review(review, policy):
         miles = review.get('distance_miles')
         if isinstance(miles,(int,float)) and not isinstance(miles,bool) and 0 <= miles <= policy['max_commute_miles'] and review.get('distance_evidence'):
             return ''
-        return 'Verify worksite within the configured commute limit and save distance evidence'
+        return 'Verify worksite within 15 miles of 90247 and save distance evidence'
     return 'Workplace must be reviewed'
 
 

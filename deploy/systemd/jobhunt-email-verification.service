@@ -1,0 +1,13 @@
+[Unit]
+Description=Read the email code for a live authorized job application
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/job-hunter/deploy/job-autopilot
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/jobhunter/.local/bin
+UMask=0077
+ExecStart=/usr/bin/python3 /opt/job-hunter/deploy/email-verification/scripts/collect_code.py
+TimeoutStartSec=175
+KillMode=control-group

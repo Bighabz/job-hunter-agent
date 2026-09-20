@@ -1,5 +1,9 @@
 # Job Hunter Agent operating instructions
 
+## Current question and answer recording
+
+Follow [scripts/INTERVIEW-QA.md](scripts/INTERVIEW-QA.md). Record the full question and exact answer for application forms, interviews, screenings, assessments, and authorized recruiter exchanges. Preserve revisions and distinguish observed, draft, filled, submitted, confirmed, and outcome states. The current form helper captures browser field values into the private SQLite/Markdown journal. Never log passwords, verification codes, or financial identifiers.
+
 ## Scope and source of truth
 
 Use this repository to prepare and track job applications for its owner. Read the owner's explicit current instructions, private `master/profile.md`, and private `master/resume.md` before preparing materials. The public templates and target archetypes are prompts for tailoring, not evidence of the owner's qualifications.
@@ -18,7 +22,7 @@ This repository's current workflow is employer-ATS focused. LinkedIn is disabled
 1. Verify browser access, required domain permissions, and resume upload support before an application run.
 2. Read the full job description. Check qualifications, location, work authorization, compensation, and schedule against the owner's profile.
 3. Deduplicate by canonical job URL and the private ledger. Reserve the application before interacting with a submission flow.
-4. Save the job description, tailored Markdown, PDFs, and notes under `applications/{company}_{role}_{date}/`.
+4. Preserve the owner's approved resume and verify its configured path. Do not generate or substitute a resume unless explicitly instructed. Save the job description, any authorized cover-letter text, and notes under `applications/{company}_{role}_{date}/`.
 5. Review every final browser field against the authoritative profile. The helper's `unmapped_required` check does not validate all mapped answers.
 6. Submit only within the owner's explicit scope. Treat unknown required answers as a hold.
 7. Require a visible confirmation and saved evidence before recording `confirmed`. A click, timeout, or filled form is not evidence of success.
@@ -26,7 +30,7 @@ This repository's current workflow is employer-ATS focused. LinkedIn is disabled
 
 ## Runtime limits
 
-Load candidate-specific limits from gitignored `scripts/external_policy.json` or `JOBHUNT_POLICY`. Keep application state under `JOBHUNT_APPLICATIONS` or the gitignored `applications/` directory. Respect host cooldowns, `Retry-After`, daily/batch budgets, and the configured spacing between attempts.
+Load candidate-specific limits from gitignored `scripts/external_policy.json`. Keep application state under `JOBHUNT_APPLICATIONS` or the gitignored `applications/` directory. Respect host cooldowns, `Retry-After`, daily/batch budgets, and the configured spacing between attempts.
 
 Use bounded batches and checkpoint on failures. Do not repeatedly dispatch work into a known permission, upload, CAPTCHA, or rate-limit blocker.
 

@@ -1,3 +1,7 @@
+﻿> **RETIRED 2026-07-03: Habib decided he is NOT going back to armed/physical security.**
+> Do NOT target, search, or score these roles. Cybersecurity archetypes (soc_analyst,
+> cybersecurity_engineer) remain active. Kept for history only.
+
 # Target Archetype: Armed Security Officer - Federal
 
 ## Priority Keywords
@@ -54,15 +58,16 @@
 - Availability and reliability
 
 ## Common Knockout Questions
-- "Active guard card?" → Yes
-- "Exposed firearms permit?" → Yes
-- "PC 832?" → Yes
-- "Prior federal facility experience?" → [Update if applicable]
-- "Drug screening?" → [Confirm]
-- "US Citizen?" → [Confirm]
-- "Clearance?" → No active clearance, willing to obtain / eligible
+- "Active guard card?" â†’ Yes
+- "Exposed firearms permit?" â†’ Yes
+- "PC 832?" â†’ Yes
+- "Prior federal facility experience?" â†’ [Update if applicable]
+- "Drug screening?" â†’ [Confirm]
+- "US Citizen?" â†’ [Confirm]
+- "Clearance?" â†’ No active clearance, willing to obtain / eligible
 
 ## Contractor Notes
 - Paragon Systems - major FPS contractor
 - Inter-Con Security - also federal contracts
 - These roles often have rigid post order compliance - emphasize rule-following, reliability
+

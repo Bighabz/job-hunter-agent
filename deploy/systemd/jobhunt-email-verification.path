@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch for job application email verification requests
+
+[Path]
+PathChanged=/opt/job-hunter/applications/_pending_email_verification.json
+Unit=jobhunt-email-verification.service
+
+[Install]
+WantedBy=multi-user.target

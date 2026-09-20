@@ -1,0 +1,1157 @@
+boards:
+  ashby:
+  - stainless
+  - vanta
+  - linear
+  - notion
+  - cohere
+  - ramp
+  - miter
+  greenhouse:
+  - 6sense
+  - abnormalsecurity
+  - affirm
+  - agero
+  - airbnb
+  - airship
+  - airtable
+  - alchemer
+  - algolia
+  - alloy
+  - amplitude
+  - amwell
+  - anthropic
+  - apolloio
+  - applovin
+  - ardentmc
+  - asana
+  - atbayjobs
+  - attentive
+  - avidxchangeinc
+  - axios
+  - axonius
+  - backblaze
+  - bandwidth
+  - betterhelp
+  - betterment
+  - beyondfinance
+  - bigid
+  - billtrust
+  - bird
+  - bitwarden
+  - blueconic
+  - blumira
+  - branch
+  - braze
+  - brex
+  - bugcrowd
+  - buildkite
+  - calm
+  - carta
+  - celigo
+  - checkr
+  - chime
+  - circleci
+  - classpass
+  - cloudflare
+  - cloverhealth
+  - coalition
+  - cockroachlabs
+  - coinbase
+  - collectivehealth
+  - collibra
+  - commvault
+  - conga
+  - contentful
+  - corelight
+  - coreweave
+  - costar
+  - coursera
+  - cribl
+  - cultureamp
+  - customerio
+  - cybersheath
+  - dashlane
+  - databricks
+  - datadog
+  - dataiku
+  - descript
+  - dialpad
+  - disco
+  - discord
+  - doximity
+  - dragos
+  - dremio
+  - dropbox
+  - druva
+  - duolingo
+  - elastic
+  - emplifi
+  - everlane
+  - everlaw
+  - expel
+  - faire
+  - fastly
+  - fictiv
+  - figma
+  - five9
+  - fivetran
+  - fourkites
+  - freenome
+  - galileo
+  - gitlab
+  - glossier
+  - grafanalabs
+  - greenhouse
+  - gtslivingfoods
+  - guardz
+  - guild
+  - gusto
+  - hackerrank
+  - healthjoy
+  - hellofresh
+  - hiddenlayer
+  - highradius
+  - hightouch
+  - honeycomb
+  - honor
+  - hootsuite
+  - huntress
+  - hyperproof
+  - impact
+  - insider
+  - instacart
+  - instawork
+  - intercom
+  - invoca
+  - iterable
+  - jamf
+  - jfrog
+  - justanswer
+  - justworks
+  - karat
+  - kasa
+  - ketch
+  - khanacademy
+  - klaviyo
+  - knowbe4
+  - la28careers
+  - labelbox
+  - lastpass
+  - later
+  - lattice
+  - launchdarkly
+  - levanta
+  - lightningai
+  - litify
+  - liveperson
+  - logicgate
+  - lokalise
+  - lucidmotors
+  - lucidsoftware
+  - lyft
+  - make
+  - marqeta
+  - masterclass
+  - melio
+  - mercari
+  - mercury
+  - method
+  - metropolis
+  - mindbody
+  - misfitsmarket
+  - mixpanel
+  - modernhealth
+  - mongodb
+  - motive
+  - movableink
+  - neo4j
+  - netlify
+  - netskope
+  - newrelic
+  - nextdoor
+  - nextiva
+  - nice
+  - nuro
+  - observeai
+  - offerup
+  - okta
+  - opentable
+  - orca
+  - orcasecurity
+  - osano
+  - oscar
+  - oura
+  - outschool
+  - pagerduty
+  - pandadoc
+  - papa
+  - peloton
+  - pendo
+  - pingidentity
+  - pinterest
+  - planetscale
+  - platformsh
+  - postman
+  - privacy
+  - project44
+  - prolific
+  - qualtrics
+  - recordedfuture
+  - reddit
+  - relativity
+  - remotecom
+  - renttherunway
+  - revel
+  - ridgeline
+  - ritual
+  - roadie
+  - robinhood
+  - roofstock
+  - rubrik
+  - runzero
+  - sagesure
+  - salesloft
+  - samsara
+  - scaleai
+  - scopely
+  - seatgeek
+  - securityscorecard
+  - sendbird
+  - shopmonkey
+  - shopmy
+  - sidecarhealth
+  - sigmacomputing
+  - singlestore
+  - skillsoft
+  - smartling
+  - smartsheet
+  - spacex
+  - sproutsocial
+  - squarespace
+  - stackblitz
+  - starburst
+  - stitchfix
+  - storyblok
+  - stripe
+  - sumologic
+  - sweetgreen
+  - swordhealth
+  - synack
+  - tailscale
+  - talkspace
+  - tanium
+  - taskrabbit
+  - tecovas
+  - thrivemarket
+  - tines
+  - toast
+  - tripactions
+  - truebill
+  - tulip
+  - turing
+  - twilio
+  - typeform
+  - udemy
+  - upgrade
+  - upstart
+  - valimail
+  - vardaspace
+  - veracode
+  - vercel
+  - verkada
+  - vonage
+  - wasabi
+  - webflow
+  - workato
+  - wrike
+  - wunderkind
+  - xometry
+  - yotpo
+  - yugabyte
+  - zenput
+  - zocdoc
+  - zoominfo
+  - zscaler
+  - zuora
+  lever:
+  - entrata
+  - palantir
+  - uvcyber
+  - veeva
+  smartrecruiters:
+  - ServiceNow
+  - visa
+  - Experian
+  workable:
+  - authorium
+  - briljent
+  - defiant
+  - evolve-security
+  - foresight-works
+  - imachines
+  - jenzabar1
+  - obrela-security-industries-sa
+  - one-call-concepts-inc
+  - partner-one-capital
+  - prime-system
+  - proficio-inc
+filters:
+  exclude:
+  - senior
+  - ' sr '
+  - sr.
+  - staff
+  - principal
+  - lead
+  - manager
+  - director
+  - ' vp'
+  - 'vp '
+  - vp,
+  - vp of
+  - head of
+  - head,
+  - chief
+  - architect
+  - research scientist
+  - research engineer
+  - fellow
+  - distinguished
+  - account executive
+  - business development
+  - recruiter
+  - marketing
+  - ' ii'
+  - ' iii'
+  - ' iv'
+  - vice president
+  - clearance
+  - electrical
+  - mechanical
+  - manufacturing
+  - embedded
+  - firmware
+  - controls engineer
+  - mission software
+  - rf engineer
+  - hardware
+  - optical
+  - propulsion
+  - payroll
+  - benefits
+  - compensation
+  - human resources
+  - people operations
+  - talent
+  - ' tax'
+  - tax analyst
+  - treasury
+  - accounting
+  - accountant
+  - finance
+  - financial
+  - bookkeep
+  - legal
+  - paralegal
+  - underwrit
+  - claims
+  - procurement
+  - clinical
+  - nurse
+  - welding
+  - immigration
+  - capital operations
+  - revenue
+  - social media
+  - tooling design
+  - weekend
+  - overnight
+  - night shift
+  - graveyard
+  - swing shift
+  - second shift
+  - 2nd shift
+  - third shift
+  - 3rd shift
+  include:
+  - customer service
+  - customer support
+  - customer experience
+  - office assistant
+  - administrative assistant
+  - receptionist
+  - front desk
+  - data entry
+  - scheduler
+  - dispatch
+  - security officer
+  - security guard
+  - loss prevention
+  - retail associate
+  - store associate
+  - cashier
+  - warehouse associate
+  - material handler
+  - order processor
+  - operations assistant
+  - operations coordinator
+  - inventory clerk
+  - sales associate
+  - security
+  - cyber
+  - soc
+  - infosec
+  - information security
+  - grc
+  - compliance
+  - detection
+  - incident
+  - threat
+  - vulnerability
+  - identity
+  - iam
+  - cloud
+  - devops
+  - sre
+  - site reliability
+  - network
+  - systems administrator
+  - sysadmin
+  - it support
+  - help desk
+  - helpdesk
+  - service desk
+  - desktop
+  - deskside
+  - technical support
+  - it technician
+  - it specialist
+  - support specialist
+  - support technician
+  - field service
+  - data engineer
+  - ai engineer
+  - ml engineer
+  - machine learning
+  - automation
+  - software engineer
+  - support engineer
+  - analyst
+  - associate
+  - junior
+  - entry
+  - new grad
+  - tier 1
+  - recruiting coordinator
+  - recruitment coordinator
+greenhouse_verified_20260913:
+- apex
+- astranis
+- atbay
+- axiom
+- bicyclehealth
+- blend
+- boulevard
+- branch
+- capellaspace
+- chargepoint
+- charliehealth
+- current
+- divergent
+- earnest
+- epirus
+- ethos
+- faradayfuture
+- figure
+- flexport
+- galileo
+- getyourguide
+- happymoney
+- homelight
+- kayak
+- knock
+- kodiak
+- lucidmotors
+- missionlane
+- momentus
+- muonspace
+- nomadhealth
+- oklo
+- onemedical
+- ophelia
+- oportun
+- orchard
+- pacaso
+- palmetto
+- parsleyhealth
+- primerai
+- redwoodmaterials
+- rocketlab
+- roofstock
+- scoutspace
+- sidecarhealth
+- smartrent
+- sofi
+- spire
+- step
+- tripadvisor
+- twochairs
+- upstart
+- ursamajor
+- vacasa
+- vannevarlabs
+- vast
+- vts
+- watershed
+- waymo
+linkedin:
+  days: 7
+  delay_sec:
+  - 1.5
+  - 2.5
+  enabled: false
+  keywords_per_set_per_run: 6
+  max_details_per_run: 60
+  max_pages_per_query: 3
+  query_sets:
+    hybrid_local:
+      distance: 15
+      f_wt: 3
+      keywords:
+      - customer support
+      - service desk
+      - administrative assistant
+      - technical support
+      - operations coordinator
+      - it support
+      location: Gardena, California, United States
+    onsite_local:
+      distance: 15
+      f_wt: 1
+      keywords:
+      - it support
+      - help desk
+      - customer service
+      - office assistant
+      - security officer
+      - receptionist
+      - data entry
+      - dispatcher
+      - retail associate
+      - warehouse associate
+      - desktop support
+      - administrative assistant
+      - scheduler
+      - inventory clerk
+      location: Gardena, California, United States
+    remote:
+      f_wt: 2
+      keywords:
+      - customer support
+      - customer service
+      - technical support
+      - help desk
+      - service desk
+      - support specialist
+      - soc analyst
+      - it support
+      location: United States
+location:
+  hybrid_ok: true
+  local_borderline:
+  - los angeles
+  - downtown los angeles
+  - south bay
+  - greater los angeles
+  - long beach
+  - signal hill
+  - culver city
+  - playa vista
+  - playa del rey
+  - westchester
+  - marina del rey
+  - venice
+  - santa monica
+  - san pedro
+  - wilmington
+  - harbor city
+  - palos verdes
+  - rancho palos verdes
+  - vernon
+  - commerce
+  - huntington park
+  - downey
+  local_cities: &id001
+  - gardena
+  - lawndale
+  - hawthorne
+  - torrance
+  - carson
+  - compton
+  - el segundo
+  - redondo beach
+  - manhattan beach
+  - hermosa beach
+  - inglewood
+  - lomita
+  non_us_signals:
+  - india
+  - bengaluru
+  - bangalore
+  - hyderabad
+  - chennai
+  - mumbai
+  - pune
+  - delhi
+  - gurgaon
+  - noida
+  - london
+  - united kingdom
+  - ' uk'
+  - canada
+  - toronto
+  - vancouver
+  - ontario
+  - germany
+  - berlin
+  - munich
+  - france
+  - paris
+  - ireland
+  - dublin
+  - australia
+  - singapore
+  - israel
+  - tel aviv
+  - brazil
+  - sao paulo
+  - mexico
+  - poland
+  - spain
+  - netherlands
+  - amsterdam
+  - philippines
+  - japan
+  - tokyo
+  - egypt
+  - cairo
+  - greece
+  - athens
+  - romania
+  - bulgaria
+  - portugal
+  - lisbon
+  - italy
+  - milan
+  - dubai
+  - united arab emirates
+  - saudi
+  - qatar
+  - turkey
+  - istanbul
+  - colombia
+  - bogota
+  - argentina
+  - buenos aires
+  - chile
+  - peru
+  - costa rica
+  - vietnam
+  - indonesia
+  - malaysia
+  - thailand
+  - kenya
+  - nigeria
+  - south africa
+  - new zealand
+  - south korea
+  - korea
+  - seoul
+  - china
+  - hong kong
+  - taiwan
+  - sweden
+  - stockholm
+  - denmark
+  - copenhagen
+  - norway
+  - oslo
+  - finland
+  - helsinki
+  - switzerland
+  - zurich
+  - austria
+  - vienna
+  - belgium
+  - brussels
+  - czech
+  - prague
+  - hungary
+  - budapest
+  - ukraine
+  - serbia
+  - croatia
+  - estonia
+  - latvia
+  - lithuania
+  - europe
+  us_signals:
+  - united states
+  - u.s.
+  - remote us
+  - usa
+  - california
+  - new york
+  - texas
+  - virginia
+  - washington
+  - colorado
+  - florida
+  - georgia
+  - illinois
+  - massachusetts
+  - los angeles
+  - san francisco
+  - hawthorne
+  - irvine
+  - gardena
+scoring:
+  bonus:
+    ai_adoption:
+    - ai adoption
+    - ai transformation
+    - ai enablement
+    - ai strategy
+    - digital transformation
+    - innovation
+    ca_proximity: *id001
+    claude_code:
+    - claude code
+    - claude
+    - anthropic
+    - model context protocol
+    - ' mcp'
+    - cursor
+    - copilot
+    - ai agents
+    - agentic
+    consulting:
+    - consultant
+    - consulting
+    - solutions engineer
+    - professional services
+    - customer success
+    entry_signal:
+    - entry level
+    - entry-level
+    - junior
+    - associate
+    - new grad
+    - early career
+    - 0-2 years
+    - 1-3 years
+    - 0 to 2
+    - no prior experience
+    - tier 1
+  drop:
+    account_required_hosts:
+    - paycomonline.net
+    - myworkdayjobs.com
+    - workforcenow.adp.com
+    - icims.com
+    - taleo.net
+    - successfactors.com
+    - oraclecloud.com
+    - brassring.com
+    - dayforcehcm.com
+    - csod.com
+    - ultipro.com
+    aggregator_companies:
+    - sundayy
+    - hire feed
+    - hirefeed
+    - fetchjobs
+    - jobright
+    - remotehunter
+    - remote hunter
+    - synergisticit
+    - yo hr consultancy
+    - yo hr
+    - chatgpt jobs
+    - codegeniusrecruit
+    - rex.zone
+    - talentally
+    - lensa
+    - jobleads
+    - get it recruit
+    - jobs via dice
+    - tietalent
+    - ziprecruiter
+    - energy jobline
+    - adzuna
+    - whatjobs
+    - jooble
+    - jobrapido
+    - talent.com
+    - patterned learning
+    ai_training_desc_patterns:
+    - train next-generation ai
+    - train next generation ai
+    - training next-gen ai
+    - help train ai
+    - shape how models learn
+    - shape how models
+    - no prior experience in ai
+    - no ai experience
+    - rate ai responses
+    - rank ai responses
+    - evaluate ai-generated
+    - review ai-generated
+    - data labeling
+    - data annotation
+    - annotation tasks
+    - labeling tasks
+    - per-task basis
+    - paid per task
+    clearance_patterns:
+    - ts/sci
+    - top secret
+    - active secret
+    - active clearance
+    - current clearance
+    - polygraph
+    - secret clearance
+    company_blocklist:
+    - turing
+    - dataannotation
+    - data annotation
+    - mindrift
+    - alignerr
+    - outlier
+    - labelbox
+    - remotasks
+    - appen
+    - scale ai
+    - codevertex
+    pay_floor: 0
+    physical_security_desc_patterns: []
+    weapons_companies:
+    - anduril
+    - palantir
+    - lockheed
+    - raytheon
+    - rtx corporation
+    - northrop
+    - general atomics
+    - general dynamics
+    - l3harris
+    - bae systems
+    - boeing
+    - elbit
+    - aerovironment
+    - kratos defense
+    - shield ai
+    weapons_desc_patterns:
+    - munition
+    - missile
+    - warhead
+    - hypersonic
+    - lethality
+    - weapon system
+    - weapons system
+    - fire control
+    - targeting system
+    - air dominance
+    - precision strike
+    years_gate: 4
+  pay_great: 62400
+  pay_ok: 41600
+  tracks:
+    applied_ai:
+    - applied ai
+    - ai engineer
+    - machine learning
+    - ml engineer
+    - llm
+    - large language model
+    - rag
+    - generative ai
+    - genai
+    - ai/ml
+    - forward deployed
+    - prompt engineer
+    cloud_devops:
+    - cloud engineer
+    - devops
+    - site reliability
+    - ' sre'
+    - platform engineer
+    - cloud security
+    data:
+    - data engineer
+    - data analyst
+    - analytics engineer
+    entry_cyber:
+    - soc analyst
+    - security analyst
+    - cybersecurity analyst
+    - information security analyst
+    - incident response
+    - threat detection
+    - threat hunting
+    - security operations
+    - grc
+    - compliance analyst
+    - vulnerability
+    - detection engineer
+    immediate_paid_work:
+    - customer service
+    - customer support
+    - customer experience
+    - office assistant
+    - administrative assistant
+    - receptionist
+    - front desk
+    - data entry
+    - scheduler
+    - dispatch
+    - security officer
+    - security guard
+    - loss prevention
+    - retail associate
+    - store associate
+    - cashier
+    - warehouse associate
+    - material handler
+    - order processor
+    - operations assistant
+    - operations coordinator
+    - inventory clerk
+    - sales associate
+    - recruiting coordinator
+    - recruitment coordinator
+    it_support:
+    - it support
+    - help desk
+    - helpdesk
+    - service desk
+    - systems administrator
+    - desktop support
+    - deskside support
+    - technical support
+    - it technician
+    - it specialist
+    - support specialist
+    - support technician
+    - computer technician
+    - field service technician
+    - end user support
+    - end-user support
+    - user support
+    - technical support specialist
+    - it associate
+    - junior systems administrator
+
+# Board tokens probed live against the public ATS APIs on 2026-09-16 (batch
+# 20260916-102302) after the 160-row durable queue was swept to exhaustion twice
+# with 0 confirmations. 561 candidate slugs probed, 91 returned a live board.
+greenhouse_verified_20260916:
+- agero
+- airbnb
+- apolloio
+- betterhelp
+- branch
+- coreweave
+- fictiv
+- freenome
+- galileo
+- hellofresh
+- kasa
+- lucidmotors
+- metropolis
+- movableink
+- neo4j
+- privacy
+- prolific
+- reddit
+- ridgeline
+- ritual
+- roadie
+- roofstock
+- sagesure
+- seatgeek
+- shopmonkey
+- sidecarhealth
+- skillsoft
+- stackblitz
+- tecovas
+- truebill
+- tulip
+- turing
+- upstart
+- wunderkind
+- xometry
+- zuora
+lever_verified_20260916:
+- entrata
+- palantir
+- veeva
+
+ashby_verified_20260916b:
+  - alan
+  - ashby
+  - astronomer
+  - baseten
+  - benchling
+  - bland
+  - browserbase
+  - candidhealth
+  - cognition
+  - crusoe
+  - deepgram
+  - dust
+  - elevenlabs
+  - fireworks
+  - flock
+  - gamma
+  - gorgias
+  - greptile
+  - harvey
+  - hex
+  - kernel
+  - langchain
+  - lovable
+  - mercor
+  - metaview
+  - mintlify
+  - modal
+  - ollama
+  - ontra
+  - openai
+  - owner
+  - parafin
+  - peec
+  - perplexity
+  - persona
+  - plaid
+  - polymarket
+  - posthog
+  - recall
+  - reducto
+  - replit
+  - resend
+  - sardine
+  - scribe
+  - sentry
+  - sierra
+  - speak
+  - sphere
+  - supabase
+  - synthesia
+  - tavus
+  - vapi
+  - warp
+  - weave
+  - writer
+  - zip
+greenhouse_verified_20260916b:
+  - altruist
+  - amplemarket
+  - anaplan
+  - appsflyer
+  - axuall
+  - blend
+  - bloomerang
+  - brainlabs
+  - brandwatch
+  - brave
+  - buzzfeed
+  - cabify
+  - cargurus
+  - ceribell
+  - charliehealth
+  - chowbus
+  - community
+  - doctolib
+  - drivewealth
+  - dscout
+  - exiger
+  - extend
+  - falconx
+  - feedzai
+  - fireblocks
+  - flex
+  - geotab
+  - gocardless
+  - gympass
+  - healthverity
+  - highnote
+  - hive
+  - housecall
+  - hungryroot
+  - iconiq
+  - idme
+  - indeedflex
+  - instabase
+  - kentik
+  - kodiak
+  - lithic
+  - locusrobotics
+  - maxwell
+  - natera
+  - nexhealth
+  - onbe
+  - opensesame
+  - otter
+  - pantheon
+  - parallel
+  - paytient
+  - perfectserve
+  - pontera
+  - purestorage
+  - qgenda
+  - qualia
+  - quantifind
+  - radar
+  - redcircle
+  - rightway
+  - salsify
+  - slice
+  - sofi
+  - solarisbank
+  - sonicwall
+  - splice
+  - sumup
+  - tamara
+  - tebra
+  - tempo
+  - tide
+  - truecaller
+  - upkeep
+  - vestwell
+  - via
+  - watershed
+  - waymark
+  - weave
+  - wingspan
+  - wisetack
+  - wonderschool
+  - yipitdata
+lever_verified_20260916b:
+  - arcadia
+  - binance
+  - contentsquare
+  - farfetch
+  - gohighlevel
+  - greenlight
+  - hive
+  - outreach
+  - pigment
+  - skio
+  - superside
+  - unlimit
+  - zeta
+workable_verified_20260916b:
+  - treatwell
+  - zego

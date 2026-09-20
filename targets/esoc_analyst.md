@@ -1,3 +1,7 @@
+﻿> **RETIRED 2026-07-03: Habib decided he is NOT going back to armed/physical security.**
+> Do NOT target, search, or score these roles. Cybersecurity archetypes (soc_analyst,
+> cybersecurity_engineer) remain active. Kept for history only.
+
 # Target Archetype: ESOC Analyst (Enterprise Security Operations Center)
 
 ## Priority Keywords
@@ -56,3 +60,4 @@ ESOC roles sit at the intersection of physical security and IT. Habib's combinat
 - ESOC roles typically 24/7 shift work
 - Emphasize: reliability, shift flexibility, calm under pressure
 - Professional presentation matters - Inter-Con values corporate polish
+

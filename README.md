@@ -8,7 +8,7 @@ The current operating workflow focuses on **employer ATS portals**. LinkedIn dis
 
 1. **Discover:** collect public employer/ATS listings, cache responses, normalize URLs, and exclude previously handled roles.
 2. **Review:** check qualifications, work authorization, worksite or remote eligibility, schedule, and candidate-provided answers.
-3. **Prepare:** tailor the resume and cover letter from a private master profile and save each version with the job description.
+3. **Prepare:** use the candidate's approved resume and verified private profile. The current VPS batch preserves a fixed, approved resume; it may prepare truthful role-specific cover-letter text when useful. It does not silently substitute a newly generated resume.
 4. **Reserve:** claim a job in a SQLite ledger before attempting an application. Pending and unresolved attempts survive process restarts and prevent duplicate submissions.
 5. **Apply:** use an authenticated browser within the candidate's authorized scope. Stop for account creation, passwords, CAPTCHA, payments, or unknown personal answers.
 6. **Verify:** record a submission only after visible confirmation and a saved evidence file. A filled form or a clicked Submit button is not confirmation.
@@ -16,7 +16,7 @@ The current operating workflow focuses on **employer ATS portals**. LinkedIn dis
 
 ## What is in this repository
 
-This is the public, reusable portion of a personal system. It includes templates, runbooks, database migrations, a dashboard component, and current application-accounting helpers. The private deployment also has scheduled discovery and browser orchestration; those machine-specific runners and candidate data are not bundled here.
+This repository now includes the current VPS source for discovery, browser applications, bounded batch orchestration, email verification, and question/answer recording, plus the deployed systemd schedules and shell wrappers. It also retains templates, database migrations, and the dashboard component from earlier versions. Candidate documents, live application records, credentials, and browser sessions remain private.
 
 ```text
 job-hunter-agent/
@@ -24,19 +24,29 @@ job-hunter-agent/
 ├── master/                           # profile/resume/cover-letter templates
 ├── targets/                          # role-specific tailoring notes
 ├── scripts/
+│   ├── scan_portals.py               # multi-ATS discovery, grading, and deduplication
+│   ├── portals.yml                   # current board catalog and search configuration
+│   ├── external_batch.py            # locked, bounded Linux application runner
 │   ├── external_guard.py             # SQLite reservations, dedupe, limits, evidence
 │   ├── external_policy.example.json  # copy to gitignored external_policy.json
 │   ├── polite_http.py                # cached HTTPS JSON retrieval and backoff
 │   ├── email_verification.py         # matching-code continuation for a waiting form
+│   ├── interview_qa.py               # durable question/answer and outcome journal
+│   ├── interview_qa_capture.js        # exact browser question/answer capture
 │   ├── test_external_workflow.py     # offline accounting/cache regression tests
 │   ├── test_email_verification.py    # offline code-matching/continuation tests
 │   ├── generate_pdf.py
 │   └── render_pdf.py
-├── supabase/                         # application-tracking schema
+├── scratchpad/gh_apply.py             # current Playwright application helper
+├── deploy/                           # VPS wrappers, systemd units, email collector
+├── docs/vps-source-manifest.json      # file-level source hashes and redactions
+├── supabase/                         # legacy optional application-tracking schema
 └── dashboard/JobHunterDashboard.jsx  # React dashboard component
 ```
 
-The runtime helper snapshot was refreshed in September 2026. Public adaptations remove personal policy values, add `JOBHUNT_POLICY` for configuration, and keep tests independent of a candidate's local policy.
+The source was copied from the running VPS in September 2026. See [VPS-SYNC.md](docs/VPS-SYNC.md) for exact scope, deployment paths, deliberate privacy exclusions, and validation. The current VPS uses the local ledger; its former Supabase connection has been retired. The legacy integration remains in the repository for reference.
+
+Validation covers all 63 included tests: the system Python runs the offline suite, and the VPS's Playwright environment additionally runs the browser fixtures that the system interpreter skips.
 
 ## Setup
 
@@ -57,7 +67,7 @@ cp scripts/external_policy.example.json scripts/external_policy.json
 python scripts/external_guard.py status
 ```
 
-`JOBHUNT_APPLICATIONS` can point to an alternative private application directory; `JOBHUNT_POLICY` can point to your local policy file. The guard's CLI records accounting state; it does not browse sites or submit applications.
+`JOBHUNT_APPLICATIONS` can point the accounting helpers at an alternative private application directory. The guard reads `scripts/external_policy.json`. Its CLI records accounting state; it does not browse sites or submit applications.
 
 The example limits are configurable budgets, not submission targets or promises. The current fit-review helper assumes California eligibility and weekday business hours. Adapt that logic to your own requirements before reuse.
 
@@ -74,7 +84,9 @@ The PDF scripts are optional and have separate rendering dependencies. Check the
 - **HTTP discovery:** HTTPS JSON caching and per-host pacing; `Retry-After` and error cooldowns persist across restarts.
 - **Email verification:** a waiting Greenhouse form can resume only with a recent, unused code matching the expected sender and employer-specific subject. Used code values are removed from the local code file.
 
-The email helper does not fetch email or provide a mailbox connection. A separately authorized collector must supply the private code file. Codes and mailbox data must never be committed.
+The event-driven [email collector](deploy/email-verification/scripts/collect_code.py) uses a separately configured Gmail MCP connection and a live pending-application request. Its systemd path/service definitions are included. Codes and mailbox data must never be committed.
+
+The current runner also records full application questions and actual field answers, including revisions and outcomes, through [INTERVIEW-QA.md](scripts/INTERVIEW-QA.md). Credential and financial fields are filtered from captures. The journal itself remains private.
 
 ## Known limitations
 

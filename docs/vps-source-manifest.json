@@ -1,0 +1,303 @@
+{
+  "captured_at": "2026-09-20T10:01:05.715352+00:00",
+  "files": [
+    {
+      "source": "scripts/discover_and_triage.py",
+      "destination": "scripts/discover_and_triage.py",
+      "sha256": "afab4b3ab69addba4ba9e22c2f658f85d48d8a017684a41e64f4683dcadb68c9",
+      "mode": "exact",
+      "published_sha256": "afab4b3ab69addba4ba9e22c2f658f85d48d8a017684a41e64f4683dcadb68c9"
+    },
+    {
+      "source": "scripts/email_verification.py",
+      "destination": "scripts/email_verification.py",
+      "sha256": "55b8557b9bb41a56e7ee30f36777a271bfd1f2974f0527961aeec43462b25d64",
+      "mode": "exact",
+      "published_sha256": "55b8557b9bb41a56e7ee30f36777a271bfd1f2974f0527961aeec43462b25d64"
+    },
+    {
+      "source": "scripts/external_batch.py",
+      "destination": "scripts/external_batch.py",
+      "sha256": "13f96b5b78c1a2a78c0d057d8ab49f6d153a464f375951ad6c9df4616a9511c0",
+      "mode": "exact",
+      "published_sha256": "13f96b5b78c1a2a78c0d057d8ab49f6d153a464f375951ad6c9df4616a9511c0"
+    },
+    {
+      "source": "scripts/external_guard.py",
+      "destination": "scripts/external_guard.py",
+      "sha256": "3030ab91cd4df375bcdb853480d870c9c339c72a63ec3272466c582b0087e34b",
+      "mode": "exact",
+      "published_sha256": "3030ab91cd4df375bcdb853480d870c9c339c72a63ec3272466c582b0087e34b"
+    },
+    {
+      "source": "scripts/fixtures/li_search.html",
+      "destination": "scripts/fixtures/li_search.html",
+      "sha256": "ed709b90684d6b84be49d5183267accc1599f12d6437fe91a98a890b0d041bfc",
+      "mode": "exact",
+      "published_sha256": "ed709b90684d6b84be49d5183267accc1599f12d6437fe91a98a890b0d041bfc"
+    },
+    {
+      "source": "scripts/fixtures/li_view.html",
+      "destination": "scripts/fixtures/li_view.html",
+      "sha256": "da4bf9c8a2e1d887343b79b5195fd375eccb177b228aa9c02a6ae09aac9e449b",
+      "mode": "exact",
+      "published_sha256": "da4bf9c8a2e1d887343b79b5195fd375eccb177b228aa9c02a6ae09aac9e449b"
+    },
+    {
+      "source": "scripts/generate_pdf.py",
+      "destination": "scripts/generate_pdf.py",
+      "sha256": "8e20eea4067a0ecae32b3b90c58019d98efc8fa78e032c3857ed09cee96d1b1c",
+      "mode": "exact",
+      "published_sha256": "8e20eea4067a0ecae32b3b90c58019d98efc8fa78e032c3857ed09cee96d1b1c"
+    },
+    {
+      "source": "scripts/INTERVIEW-QA.md",
+      "destination": "scripts/INTERVIEW-QA.md",
+      "sha256": "c8dbdb713dd1be177b4e302a1beb35fa4cd79493d09e3f3973b9b0074fec6d44",
+      "mode": "exact",
+      "published_sha256": "c8dbdb713dd1be177b4e302a1beb35fa4cd79493d09e3f3973b9b0074fec6d44"
+    },
+    {
+      "source": "scripts/interview_qa.py",
+      "destination": "scripts/interview_qa.py",
+      "sha256": "fcd5218542c0c981faf583d46ac779e9c81dedf8e753b2f3304e6de85ff9c290",
+      "mode": "exact",
+      "published_sha256": "fcd5218542c0c981faf583d46ac779e9c81dedf8e753b2f3304e6de85ff9c290"
+    },
+    {
+      "source": "scripts/interview_qa_capture.js",
+      "destination": "scripts/interview_qa_capture.js",
+      "sha256": "cfaa4d8890379df77a54c4f39b2def696c1f4aad1709c09e486dc8e5eeef079e",
+      "mode": "exact",
+      "published_sha256": "cfaa4d8890379df77a54c4f39b2def696c1f4aad1709c09e486dc8e5eeef079e"
+    },
+    {
+      "source": "scripts/make_daily_brief.py",
+      "destination": "scripts/make_daily_brief.py",
+      "sha256": "c9db8c365ec60c40c945a0773f981751d726e2fe2196141a171f3e5e6ef485de",
+      "mode": "exact",
+      "published_sha256": "c9db8c365ec60c40c945a0773f981751d726e2fe2196141a171f3e5e6ef485de"
+    },
+    {
+      "source": "scripts/polite_http.py",
+      "destination": "scripts/polite_http.py",
+      "sha256": "4915ac12e7d310fdce65ebd0f14be847c7313323f99f9b9411831446299d733f",
+      "mode": "exact",
+      "published_sha256": "4915ac12e7d310fdce65ebd0f14be847c7313323f99f9b9411831446299d733f"
+    },
+    {
+      "source": "scripts/portals.yml",
+      "destination": "scripts/portals.yml",
+      "sha256": "0ce71545218b1d9ecdc3a5ba981fdfeb61a3bd40d009cb94f3d3039fe837f4e4",
+      "mode": "exact",
+      "published_sha256": "0ce71545218b1d9ecdc3a5ba981fdfeb61a3bd40d009cb94f3d3039fe837f4e4"
+    },
+    {
+      "source": "scripts/probe_boards.py",
+      "destination": "scripts/probe_boards.py",
+      "sha256": "797ace48e3c8aed77c0a4976e45a0b445c8521a763dc692efeecf7d4ab7c73ff",
+      "mode": "exact",
+      "published_sha256": "797ace48e3c8aed77c0a4976e45a0b445c8521a763dc692efeecf7d4ab7c73ff"
+    },
+    {
+      "source": "scripts/push_scan_to_supabase.py",
+      "destination": "scripts/push_scan_to_supabase.py",
+      "sha256": "51d05210878343a9431b4313eb29ee64f6b15c5e33848d842b2b1a442435e2de",
+      "mode": "exact",
+      "published_sha256": "51d05210878343a9431b4313eb29ee64f6b15c5e33848d842b2b1a442435e2de"
+    },
+    {
+      "source": "scripts/README_scan.md",
+      "destination": "scripts/README_scan.md",
+      "sha256": "7e4aa80bf46b2a68e5e98605288f46f7de5329ff61abf45ed1f422dc0c6f58b5",
+      "mode": "exact",
+      "published_sha256": "7e4aa80bf46b2a68e5e98605288f46f7de5329ff61abf45ed1f422dc0c6f58b5"
+    },
+    {
+      "source": "scripts/render_pdf.py",
+      "destination": "scripts/render_pdf.py",
+      "sha256": "b4dfba9218a972c125dea2a8678d0a28ce684f9961a294217030fdc5e711c2f2",
+      "mode": "exact",
+      "published_sha256": "b4dfba9218a972c125dea2a8678d0a28ce684f9961a294217030fdc5e711c2f2"
+    },
+    {
+      "source": "scripts/scan_linkedin_guest.py",
+      "destination": "scripts/scan_linkedin_guest.py",
+      "sha256": "d5a344948b1dad4a77b1488098ef40100df5bd323212da3f4ebb60411c070a9d",
+      "mode": "exact",
+      "published_sha256": "d5a344948b1dad4a77b1488098ef40100df5bd323212da3f4ebb60411c070a9d"
+    },
+    {
+      "source": "scripts/scan_portals.py",
+      "destination": "scripts/scan_portals.py",
+      "sha256": "62d8cac620a2cda6e8fd21c24f288f0a31a77aabff9c3140066dfcb09d3c7796",
+      "mode": "exact",
+      "published_sha256": "62d8cac620a2cda6e8fd21c24f288f0a31a77aabff9c3140066dfcb09d3c7796"
+    },
+    {
+      "source": "scripts/test_email_verification.py",
+      "destination": "scripts/test_email_verification.py",
+      "sha256": "fb1e1c1b6813abfc26bf0a05a59cf047bff04076bbd83741f86f6a91f3404f80",
+      "mode": "exact",
+      "published_sha256": "fb1e1c1b6813abfc26bf0a05a59cf047bff04076bbd83741f86f6a91f3404f80"
+    },
+    {
+      "source": "scripts/test_interview_qa.py",
+      "destination": "scripts/test_interview_qa.py",
+      "sha256": "bbb2ac7efc104d4b3f8f5c215c4b91a8b03462da9cf2ad388af68771afca2f3e",
+      "mode": "exact",
+      "published_sha256": "bbb2ac7efc104d4b3f8f5c215c4b91a8b03462da9cf2ad388af68771afca2f3e"
+    },
+    {
+      "source": "scripts/test_scan_v2.py",
+      "destination": "scripts/test_scan_v2.py",
+      "sha256": "bfc48315f2fb62e326f0140cecadbfbcbd1428ceba7216bd4ad6042f3bc0d688",
+      "mode": "test-expectation-update",
+      "published_sha256": "4ff1b0b4c0d696a7cdbda2cfa804c3f27ad9383250b6cd1464f399bc8bf444b9",
+      "changes": "Updated stale OC-borderline tag assertion to the current distance-check-required scanner behavior."
+    },
+    {
+      "source": "scripts/throttle_guard.py",
+      "destination": "scripts/throttle_guard.py",
+      "sha256": "5d2b2375230f4c6ce11401548f93c44d3b1b2d548f4ff4eb79b2fc6b4469be10",
+      "mode": "exact",
+      "published_sha256": "5d2b2375230f4c6ce11401548f93c44d3b1b2d548f4ff4eb79b2fc6b4469be10"
+    },
+    {
+      "source": "scripts/workable_discovery.py",
+      "destination": "scripts/workable_discovery.py",
+      "sha256": "82c7a6b5a92bf08628204f4aca59f1b1877fbb2cc3d7565cb8971dfa0ba1992d",
+      "mode": "exact",
+      "published_sha256": "82c7a6b5a92bf08628204f4aca59f1b1877fbb2cc3d7565cb8971dfa0ba1992d"
+    },
+    {
+      "source": "scratchpad/gh_apply.py",
+      "destination": "scratchpad/gh_apply.py",
+      "sha256": "0f8afd152e9b8b76f4fa88ce09167a5d40b06efbc900c5f01bd8765e0bc21738",
+      "mode": "exact",
+      "published_sha256": "0f8afd152e9b8b76f4fa88ce09167a5d40b06efbc900c5f01bd8765e0bc21738"
+    },
+    {
+      "source": "runner/run.sh",
+      "destination": "deploy/job-autopilot/run.sh",
+      "sha256": "99ded95880533e74e1434b6c42cd4043112e87c7a8d85c4b8f9212f2bee7b7f4",
+      "mode": "exact",
+      "published_sha256": "99ded95880533e74e1434b6c42cd4043112e87c7a8d85c4b8f9212f2bee7b7f4"
+    },
+    {
+      "source": "runner/run.ps1",
+      "destination": "deploy/job-autopilot/run.ps1",
+      "sha256": "f2c149b68bc0a4c5d5d908ee94bc965af16db671cc939d0af14f52d974be0291",
+      "mode": "exact",
+      "published_sha256": "f2c149b68bc0a4c5d5d908ee94bc965af16db671cc939d0af14f52d974be0291"
+    },
+    {
+      "source": "runner/CLAUDE.md",
+      "destination": "deploy/job-autopilot/CLAUDE.md",
+      "sha256": "ae9b7f963742a290accf319c5e18b4edf99a01c722629c7f4bb579a8083a8b44",
+      "mode": "exact",
+      "published_sha256": "ae9b7f963742a290accf319c5e18b4edf99a01c722629c7f4bb579a8083a8b44"
+    },
+    {
+      "source": "deploy/email-verification/scripts/collect_code.py",
+      "destination": "deploy/email-verification/scripts/collect_code.py",
+      "sha256": "bfe9f109ed2c48bd71c6429976e60f1d35ab0e24f1a9c615dd5ce553abd4c908",
+      "mode": "exact",
+      "published_sha256": "bfe9f109ed2c48bd71c6429976e60f1d35ab0e24f1a9c615dd5ce553abd4c908"
+    },
+    {
+      "source": "deploy/email-verification/SKILL.md",
+      "destination": "deploy/email-verification/SKILL.md",
+      "sha256": "5e96d0f57ca3b23efaa789c8f52f363b390880b905f2cfa230a9da7d4cc6f7b9",
+      "mode": "redacted-template",
+      "published_sha256": "893bda44f1cd65b11793547d4c1ff63e047be5220fc5c47f40f801c4819c507c",
+      "changes": "Removed private VPS address, local access helper, personal application examples, and blanket authorization."
+    },
+    {
+      "source": "deploy/run_daily_scan.sh",
+      "destination": "deploy/run_daily_scan.sh",
+      "sha256": "6b1de0a4d58d6d0cc5a482e538282617ae36602323232f6aac1c925ec0d4b6bf",
+      "mode": "exact",
+      "published_sha256": "6b1de0a4d58d6d0cc5a482e538282617ae36602323232f6aac1c925ec0d4b6bf"
+    },
+    {
+      "source": "deploy/systemd/job-autopilot.service",
+      "destination": "deploy/systemd/job-autopilot.service",
+      "sha256": "fd7cf91f39fd7925be63afde0569bed42ae1d9d28968ca41af3e60e14060418f",
+      "mode": "exact",
+      "published_sha256": "fd7cf91f39fd7925be63afde0569bed42ae1d9d28968ca41af3e60e14060418f"
+    },
+    {
+      "source": "deploy/systemd/job-autopilot.timer",
+      "destination": "deploy/systemd/job-autopilot.timer",
+      "sha256": "20722d108332eb73491b266c808086e979c9a8c84122fb03fbaa20f3788be2bb",
+      "mode": "exact",
+      "published_sha256": "20722d108332eb73491b266c808086e979c9a8c84122fb03fbaa20f3788be2bb"
+    },
+    {
+      "source": "deploy/systemd/jobhunt-email-verification.path",
+      "destination": "deploy/systemd/jobhunt-email-verification.path",
+      "sha256": "1d3a347f34224aba935ba74109c2bfb0fa887173aaf899ea0cb5eaf768de6dc3",
+      "mode": "exact",
+      "published_sha256": "1d3a347f34224aba935ba74109c2bfb0fa887173aaf899ea0cb5eaf768de6dc3"
+    },
+    {
+      "source": "deploy/systemd/jobhunt-email-verification.service",
+      "destination": "deploy/systemd/jobhunt-email-verification.service",
+      "sha256": "e2fc10f3f75084572b06c8b935566e12be399a696f25e4f0e65ab8ced74fc569",
+      "mode": "exact",
+      "published_sha256": "e2fc10f3f75084572b06c8b935566e12be399a696f25e4f0e65ab8ced74fc569"
+    },
+    {
+      "source": "deploy/systemd/jobhunter-scan.service",
+      "destination": "deploy/systemd/jobhunter-scan.service",
+      "sha256": "6e7076700748b973c5958b7851e6d5e20f5746e76ff329d80309378328af4cea",
+      "mode": "exact",
+      "published_sha256": "6e7076700748b973c5958b7851e6d5e20f5746e76ff329d80309378328af4cea"
+    },
+    {
+      "source": "deploy/systemd/jobhunter-scan.timer",
+      "destination": "deploy/systemd/jobhunter-scan.timer",
+      "sha256": "80067916a0f2276595105db3a68ceb5ff9672e6fdbeb0a290fad1f46dbaae18d",
+      "mode": "exact",
+      "published_sha256": "80067916a0f2276595105db3a68ceb5ff9672e6fdbeb0a290fad1f46dbaae18d"
+    },
+    {
+      "source": "runner/prompt-vps.md",
+      "destination": "deploy/job-autopilot/prompt-vps.example.md",
+      "mode": "redacted-template",
+      "changes": "Removed candidate start-date answer, resume hash, private draft identifiers, and application outcomes.",
+      "published_sha256": "91f99b7e13a4adb686fc28c41fd293813720e318e863563fe1f4ef7476110c70",
+      "sha256": "edab3bb2826afae93c9d8218db3be813d835da6614c22ff036b1ee74b10cc682"
+    },
+    {
+      "source": "scripts/external_policy.json",
+      "destination": "scripts/external_policy.example.json",
+      "mode": "redacted-template",
+      "changes": "Replaced home postal code and cleared confirmed personal answers; operational limits retained.",
+      "published_sha256": "43a24bf97f6edfaa7d3e812411421223078e8f3617b66575a0e98a8e1c788927",
+      "sha256": "04a96207eb6299f889c6c4b8ebfe7125580c95d3982c788b460d767af516fd2d"
+    },
+    {
+      "source": "targets/esoc_analyst.md",
+      "destination": "targets/esoc_analyst.md",
+      "sha256": "55dff697f1728e811e9283313746669dc41413876832514bc1363efd9929e443",
+      "mode": "exact",
+      "published_sha256": "55dff697f1728e811e9283313746669dc41413876832514bc1363efd9929e443"
+    },
+    {
+      "source": "targets/federal_security.md",
+      "destination": "targets/federal_security.md",
+      "sha256": "b31bb60f243b908a83a93a4f18cf83bdbf29dbf282ebfc3e9ebb2315d3fbe878",
+      "mode": "exact",
+      "published_sha256": "b31bb60f243b908a83a93a4f18cf83bdbf29dbf282ebfc3e9ebb2315d3fbe878"
+    }
+  ],
+  "excluded": [
+    "master candidate documents",
+    "applications and logs",
+    "browser profiles and credentials",
+    "scratchpad configurations and per-application scripts",
+    "private policy and live prompt"
+  ]
+}

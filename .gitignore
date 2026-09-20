@@ -33,7 +33,10 @@ supabase/connection.local.md
 *.local
 .claude/settings.local.json
 scripts/external_policy.json
-scratchpad/
+/scratchpad/*
+!/scratchpad/gh_apply.py
+deploy/job-autopilot/prompt-vps.md
+deploy/job-autopilot/prompt.md
 logs/
 *.sqlite3
 *.sqlite3-shm
