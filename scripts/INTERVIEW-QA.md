@@ -1,7 +1,7 @@
 # Required interview and screening Q&A recording
 
-Habib's standing instruction, September 18, 2026: record every question the jobrunner
-receives and the exact answer it provides from now on. This includes job application
+The application workflow records each question the assistant receives and the exact
+answer it provides. This includes job application
 screening questions, recruiter screening exchanges, written interviews, assessments,
 and any interview conversation the runner actually handles. Record all employers
 and all outcomes, including skipped, unanswered and unsuccessful applications.

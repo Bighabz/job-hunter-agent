@@ -43,10 +43,10 @@ class ExternalTests(unittest.TestCase):
         g.finish('https://a.test/jobs/1',True,'https://a.test/confirmation',str(proof))
         self.assertEqual(g.status()['confirmed'],1)
     def test_spacing_and_cooldown_persist(self):
-        g=self.guard();g.reserve('https://a.test/jobs/1','A','Role','b')
+        g=self.guard(batch_target=2);g.reserve('https://a.test/jobs/1','A','Role','b')
         self.assertIn('WAIT:',g.check('https://b.test/jobs/2','B','b'))
         g.block('https://b.test/jobs/2',7200,'429')
-        self.assertIn('cooldown',self.guard(NOW+500).check('https://b.test/jobs/2','B','b'))
+        self.assertIn('cooldown',self.guard(NOW+500,batch_target=2).check('https://b.test/jobs/2','B','b'))
     def test_batch_limit_and_midnight(self):
         g=self.guard(batch_target=1);u='https://a.test/jobs/1';g.reserve(u,'A','R','b')
         proof=self.root/'proof';proof.write_text('confirmed');g.finish(u,True,'confirmation',str(proof))

@@ -1,5 +1,5 @@
 [Unit]
-Description=External job application batches toward100/day; LinkedIn disabled
+Description=Scheduled Job Hunter application batches
 [Timer]
 OnCalendar=*-*-* 08..22:23:00 America/Los_Angeles
 Persistent=false

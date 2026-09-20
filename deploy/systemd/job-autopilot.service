@@ -1,12 +1,14 @@
 [Unit]
-Description=External employer application batch; confirmed daily target100
-OnFailure=alert@%n.service
-After=chrome.service
-Requires=chrome.service
+Description=Job Hunter application batch
+After=network-online.target
+
 [Service]
 Type=oneshot
-Environment=HOME=/root
+User=jobhunter
+WorkingDirectory=/opt/job-hunter
 Environment=DISPLAY=:99
-WorkingDirectory=/opt/job-hunter/deploy/job-autopilot
+Environment=JOBHUNT_PYTHON=/opt/job-hunter/.venv/bin/python
+Environment=PATH=/home/jobhunter/.local/bin:/opt/job-hunter/.venv/bin:/usr/local/bin:/usr/bin:/bin
+UMask=0077
 ExecStart=/usr/bin/bash /opt/job-hunter/deploy/job-autopilot/run.sh
 TimeoutStartSec=3600

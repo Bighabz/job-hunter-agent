@@ -14,10 +14,10 @@ from external_guard import Guard, validate_review, validate_personal_answers
 from email_verification import complete_email_code
 from interview_qa import capture as capture_qa, outcome as qa_outcome
 
-# 2026-08-23: cross-platform (Windows laptops + the Linux VPS my-vps, where it runs as root on DISPLAY=:99)
+# Keep the resume and browser state in configurable, private locations.
 _WIN = os.name == "nt"
-RESUME = os.environ.get("HJ_RESUME") or (r"C:\Users\candidate\Downloads\HJ_Resume.pdf" if _WIN else "/home/jobhunter/Downloads/HJ_Resume.pdf")
-_DEFAULT_PROFILE = r"C:\Users\candidate\AppData\Local\Temp\pwprof_gh" if _WIN else "/home/jobhunter/pwprof_gh"
+RESUME = os.environ.get("HJ_RESUME") or str(pathlib.Path(__file__).resolve().parent.parent / "master" / "resume.pdf")
+_DEFAULT_PROFILE = os.environ.get("JOBHUNT_BROWSER_PROFILE") or str(pathlib.Path.home() / ".cache" / "job-hunter" / "browser")
 
 def log(*a): print(*a, flush=True)
 

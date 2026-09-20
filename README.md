@@ -1,107 +1,108 @@
 # Job Hunter Agent
 
-A personal job-search and application system built around **Claude Code**, browser automation, reusable runbooks, and application tracking. It discovers roles, checks fit, prepares truthful application materials, fills employer forms, and records confirmation evidence.
+Job hunting involves a lot of repeated work: finding openings, checking requirements, answering the same questions, and remembering where you applied. I built Job Hunter to help with that process and keep a clear record of each application.
 
-## Current workflow
+It combines a job scanner with a Claude Code assistant and browser tools. The scanner builds a shortlist. The assistant can help review roles, prepare materials, and fill employer forms using information you've provided. You decide which jobs to pursue and how much the assistant is allowed to do.
 
-The current operating workflow focuses on **employer ATS portals**. LinkedIn discovery and applications are disabled in this configuration. Earlier versions used LinkedIn Easy Apply and manual submission batches; those are no longer the default.
+This is a working personal project with source from its current server deployment. You can run job discovery on its own or set up the application workflow. Browser access, your resume, and your job preferences need to be configured on your own machine.
 
-1. **Discover:** collect public employer/ATS listings, cache responses, normalize URLs, and exclude previously handled roles.
-2. **Review:** check qualifications, work authorization, worksite or remote eligibility, schedule, and candidate-provided answers.
-3. **Prepare:** use the candidate's approved resume and verified private profile. The current VPS batch preserves a fixed, approved resume; it may prepare truthful role-specific cover-letter text when useful. It does not silently substitute a newly generated resume.
-4. **Reserve:** claim a job in a SQLite ledger before attempting an application. Pending and unresolved attempts survive process restarts and prevent duplicate submissions.
-5. **Apply:** use an authenticated browser within the candidate's authorized scope. Stop for account creation, passwords, CAPTCHA, payments, or unknown personal answers.
-6. **Verify:** record a submission only after visible confirmation and a saved evidence file. A filled form or a clicked Submit button is not confirmation.
-7. **Track:** preserve outcomes, unresolved attempts, and follow-up dates in the private application log and pipeline database.
+## What it can do
 
-## What is in this repository
+| Feature | How it helps |
+| --- | --- |
+| **Find openings** | Searches configured employer boards on Greenhouse, Lever, Ashby, Workable, and SmartRecruiters. You can use this part without an AI account or browser session. |
+| **Build a useful shortlist** | Filters by job title, location, remote/on-site work, experience, and other preferences. Grades help decide what to read first; you still review the actual job description. |
+| **Prepare application materials** | Uses your private profile, resume, and templates to help write relevant answers and cover letters. The application runner uses your approved resume. Resume changes need a separate review. |
+| **Help fill applications** | Uses browser automation for supported employer forms, including text fields, dropdowns, and resume uploads. Different sites may need different field mappings. |
+| **Avoid duplicate applications** | Keeps a local record of jobs that are pending, submitted, or unresolved. That record survives restarts, so a failed run does not automatically mean applying again. |
+| **Check what actually happened** | Saves confirmation evidence and keeps uncertain attempts separate from confirmed submissions. |
+| **Handle an email verification step** | With a separately connected Gmail account and your authorization, the Greenhouse workflow can find the matching recent code and resume the waiting form. |
+| **Remember questions and answers** | Saves the wording of application questions, the answers actually entered, later changes, and the final result. Other interview exchanges can be logged when their text is available. |
+| **Produce a daily brief** | Saves a readable summary of new roles and a shortlist to review. |
+| **Run on a schedule** | Includes Linux service templates for discovery and application batches, with limits on how many applications a run can attempt. |
 
-This repository now includes the current VPS source for discovery, browser applications, bounded batch orchestration, email verification, and question/answer recording, plus the deployed systemd schedules and shell wrappers. It also retains templates, database migrations, and the dashboard component from earlier versions. Candidate documents, live application records, credentials, and browser sessions remain private.
+Optional extras include PDF helpers, a React dashboard component, and older Supabase tracking scripts. The current workflow uses local files and SQLite, a small database stored on disk. LinkedIn discovery and applications are disabled in the included configuration.
 
-```text
-job-hunter-agent/
-├── CLAUDE.md                         # reusable operating instructions
-├── master/                           # profile/resume/cover-letter templates
-├── targets/                          # role-specific tailoring notes
-├── scripts/
-│   ├── scan_portals.py               # multi-ATS discovery, grading, and deduplication
-│   ├── portals.yml                   # current board catalog and search configuration
-│   ├── external_batch.py            # locked, bounded Linux application runner
-│   ├── external_guard.py             # SQLite reservations, dedupe, limits, evidence
-│   ├── external_policy.example.json  # copy to gitignored external_policy.json
-│   ├── polite_http.py                # cached HTTPS JSON retrieval and backoff
-│   ├── email_verification.py         # matching-code continuation for a waiting form
-│   ├── interview_qa.py               # durable question/answer and outcome journal
-│   ├── interview_qa_capture.js        # exact browser question/answer capture
-│   ├── test_external_workflow.py     # offline accounting/cache regression tests
-│   ├── test_email_verification.py    # offline code-matching/continuation tests
-│   ├── generate_pdf.py
-│   └── render_pdf.py
-├── scratchpad/gh_apply.py             # current Playwright application helper
-├── deploy/                           # VPS wrappers, systemd units, email collector
-├── docs/vps-source-manifest.json      # file-level source hashes and redactions
-├── supabase/                         # legacy optional application-tracking schema
-└── dashboard/JobHunterDashboard.jsx  # React dashboard component
-```
+## A typical session
 
-The source was copied from the running VPS in September 2026. See [VPS-SYNC.md](docs/VPS-SYNC.md) for exact scope, deployment paths, deliberate privacy exclusions, and validation. The current VPS uses the local ledger; its former Supabase connection has been retired. The legacy integration remains in the repository for reference.
+1. Run a scan and read the shortlist.
+2. Ask the assistant to compare a few roles with your experience and preferences.
+3. Review the resume, proposed answers, location, schedule, and any requirements it is unsure about.
+4. Let it fill an application within the scope you've approved. Supply missing answers yourself.
+5. Check the result. A confirmed application gets a saved receipt or screenshot; an uncertain result stays marked for review.
 
-Validation covers all 63 included tests: the system Python runs the offline suite, and the VPS's Playwright environment additionally runs the browser fixtures that the system interpreter skips.
+The question-and-answer journal gives you a record to revisit when preparing for an interview.
 
-## Setup
+## Get started: find jobs first
 
-### Claude Code and the private profile
-
-Install [Claude Code](https://claude.com/claude-code), clone this repository, and start Claude in its root directory. Ask it to interview you about your actual experience, qualifications, target roles, work preferences, and application limits. Use the templates to create gitignored `master/profile.md` and `master/resume.md`.
-
-Supply your own browser connector and authenticated session. The personal deployment uses Claude in Chrome. Verify the currently available upload tool schema and required domain permissions before relying on browser automation.
-
-### Accounting helpers
-
-Use Python 3.11 or later. On Windows, install `tzdata` for IANA timezone support.
+You need **Git and Python 3.11 or later**. These commands start in a terminal:
 
 ```bash
-python -m pip install tzdata
-cp scripts/external_policy.example.json scripts/external_policy.json
-# Edit your local policy before connecting any application runner.
-python scripts/external_guard.py status
+git clone https://github.com/Bighabz/job-hunter-agent.git
+cd job-hunter-agent
+python -m venv .venv
 ```
 
-`JOBHUNT_APPLICATIONS` can point the accounting helpers at an alternative private application directory. The guard reads `scripts/external_policy.json`. Its CLI records accounting state; it does not browse sites or submit applications.
+Activate the environment:
 
-The example limits are configurable budgets, not submission targets or promises. The current fit-review helper assumes California eligibility and weekday business hours. Adapt that logic to your own requirements before reuse.
+| Terminal | Command |
+| --- | --- |
+| Windows PowerShell | `.\.venv\Scripts\Activate.ps1` |
+| macOS / Linux | `source .venv/bin/activate` |
 
-### Optional tracking and presentation
+Then install the scanner's dependencies:
 
-The `supabase/` migrations define the pipeline database. Keep your connection details in gitignored `supabase/connection.local.md`. The React dashboard is a component for integration into your own frontend, not a separately packaged application.
+```bash
+python -m pip install -r requirements.txt
+```
 
-The PDF scripts are optional and have separate rendering dependencies. Check their module documentation before use and verify every generated document visually.
+Open [`scripts/portals.yml`](scripts/portals.yml) and choose the companies, job titles, and locations you want. The included settings are a starting point for US-based searches; update them for your own situation.
 
-## Reliability helpers
+Run a scan, then make a daily brief:
 
-- **Durable accounting:** canonical job keys, transactional reservations, daily and batch limits, employer limits, pacing, and persistent cooldowns.
-- **Conservative status:** pending and unconfirmed attempts remain distinct from confirmed submissions. Unresolved attempts are not retried blindly.
-- **HTTP discovery:** HTTPS JSON caching and per-host pacing; `Retry-After` and error cooldowns persist across restarts.
-- **Email verification:** a waiting Greenhouse form can resume only with a recent, unused code matching the expected sender and employer-specific subject. Used code values are removed from the local code file.
+```bash
+python scripts/scan_portals.py --min-grade B
+python scripts/make_daily_brief.py
+```
 
-The event-driven [email collector](deploy/email-verification/scripts/collect_code.py) uses a separately configured Gmail MCP connection and a live pending-application request. Its systemd path/service definitions are included. Codes and mailbox data must never be committed.
+Read `applications/_scan_results_latest.md` for the results and `applications/_daily_brief.md` for the summary. These commands fetch public job listings and save them locally. They do not submit applications.
 
-The current runner also records full application questions and actual field answers, including revisions and outcomes, through [INTERVIEW-QA.md](scripts/INTERVIEW-QA.md). Credential and financial fields are filtered from captures. The journal itself remains private.
+For more search options, see the [scanner guide](scripts/README_scan.md).
 
-## Known limitations
+## Set up the application assistant
 
-The personal-answer validator currently checks `unmapped_required` questions. It is **not a complete validation of every mapped answer**, and the confirmation guard requires evidence files but does not establish that their contents prove success. A supervising runner must check final field values against the candidate's authoritative profile and inspect the actual confirmation.
+The [step-by-step setup guide](docs/SETUP.md) walks through:
 
-Browser challenges and ATS changes can still prevent completion. No application count, interview rate, or hiring outcome is guaranteed.
+1. Creating your private profile and choosing your resume.
+2. Setting job preferences and application limits.
+3. Connecting Claude Code to your browser.
+4. Reviewing one application before enabling a larger workflow.
+5. Adding optional email verification, PDF generation, or a dashboard.
 
-## Offline tests
+For a server installation, use the [deployment guide](deploy/README.md). The [source notes](docs/VPS-SYNC.md) explain what came from the running server and which settings were made portable for this public copy.
+
+## Things to know
+
+Employer forms change. Login prompts, CAPTCHAs, unusual fields, and missing personal answers can require your attention. The current fit checks include assumptions about California eligibility and weekday work; review those before using the application runner elsewhere.
+
+Some safeguards still rely on the supervising assistant or a person. The answer checker does not validate every field against your profile, and an evidence file by itself does not prove an application succeeded. Review the filled answers and the actual confirmation. The tool cannot promise interviews or a hiring outcome.
+
+Your resume, contact details, answers, application history, browser sessions, and email codes belong in the ignored local files. The public repository contains source code and templates.
+
+## For developers and employers
+
+The main engineering work is in keeping a browser-driven process understandable when a site changes or a run stops midway:
+
+- [`scan_portals.py`](scripts/scan_portals.py) collects and ranks openings.
+- [`external_guard.py`](scripts/external_guard.py) records attempts, checks duplicates, and enforces configured limits.
+- [`gh_apply.py`](scratchpad/gh_apply.py) handles supported browser forms and captures results.
+- [`interview_qa.py`](scripts/interview_qa.py) preserves questions, answer revisions, and outcomes.
+- [`external_batch.py`](scripts/external_batch.py) coordinates a timed Linux application run.
+
+Run the tests from the repository root:
 
 ```bash
 python -m unittest discover -s scripts -p "test_*.py"
 ```
 
-The included tests use temporary files, synthetic application records, and stubbed HTTP responses. They do not contact employers, submit applications, or read a mailbox.
-
-## Privacy
-
-Real resumes, application histories, screening answers, mailbox codes, credentials, and deployment logs stay local or in the private deployment. `.gitignore` excludes the corresponding paths. Review every staged file before publishing a fork.
+The tests use sample records and local browser fixtures. Browser checks need Playwright and Chrome; otherwise those checks are skipped. They do not submit real applications or read a mailbox.

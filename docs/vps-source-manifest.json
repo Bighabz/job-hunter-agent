@@ -19,8 +19,9 @@
       "source": "scripts/external_batch.py",
       "destination": "scripts/external_batch.py",
       "sha256": "13f96b5b78c1a2a78c0d057d8ab49f6d153a464f375951ad6c9df4616a9511c0",
-      "mode": "exact",
-      "published_sha256": "13f96b5b78c1a2a78c0d057d8ab49f6d153a464f375951ad6c9df4616a9511c0"
+      "mode": "adapted",
+      "published_sha256": "a548e16cf6f4fb734909ea17666b76c2ea362aa8ef65c8f3167772ba42dac34a",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/external_guard.py",
@@ -54,8 +55,9 @@
       "source": "scripts/INTERVIEW-QA.md",
       "destination": "scripts/INTERVIEW-QA.md",
       "sha256": "c8dbdb713dd1be177b4e302a1beb35fa4cd79493d09e3f3973b9b0074fec6d44",
-      "mode": "exact",
-      "published_sha256": "c8dbdb713dd1be177b4e302a1beb35fa4cd79493d09e3f3973b9b0074fec6d44"
+      "mode": "adapted",
+      "published_sha256": "6733328121cb7d9bf0174a590a74040d81923eee157894928bb6e002267f3179",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/interview_qa.py",
@@ -110,8 +112,9 @@
       "source": "scripts/README_scan.md",
       "destination": "scripts/README_scan.md",
       "sha256": "7e4aa80bf46b2a68e5e98605288f46f7de5329ff61abf45ed1f422dc0c6f58b5",
-      "mode": "exact",
-      "published_sha256": "7e4aa80bf46b2a68e5e98605288f46f7de5329ff61abf45ed1f422dc0c6f58b5"
+      "mode": "adapted",
+      "published_sha256": "d43394dd37e6d8f729e1b67472bd2cdb179996e51cea8c587074fdf06d5bd863",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/render_pdf.py",
@@ -152,9 +155,10 @@
       "source": "scripts/test_scan_v2.py",
       "destination": "scripts/test_scan_v2.py",
       "sha256": "bfc48315f2fb62e326f0140cecadbfbcbd1428ceba7216bd4ad6042f3bc0d688",
-      "mode": "test-expectation-update",
+      "mode": "adapted",
       "published_sha256": "4ff1b0b4c0d696a7cdbda2cfa804c3f27ad9383250b6cd1464f399bc8bf444b9",
-      "changes": "Updated stale OC-borderline tag assertion to the current distance-check-required scanner behavior."
+      "changes": "Updated stale OC-borderline tag assertion to the current distance-check-required scanner behavior.",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/throttle_guard.py",
@@ -167,116 +171,132 @@
       "source": "scripts/workable_discovery.py",
       "destination": "scripts/workable_discovery.py",
       "sha256": "82c7a6b5a92bf08628204f4aca59f1b1877fbb2cc3d7565cb8971dfa0ba1992d",
-      "mode": "exact",
-      "published_sha256": "82c7a6b5a92bf08628204f4aca59f1b1877fbb2cc3d7565cb8971dfa0ba1992d"
+      "mode": "adapted",
+      "published_sha256": "eac19f3964a9a41703af143a6e96e118b0072edab0f98c54c0bf001c9c6ac45a",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scratchpad/gh_apply.py",
       "destination": "scratchpad/gh_apply.py",
       "sha256": "0f8afd152e9b8b76f4fa88ce09167a5d40b06efbc900c5f01bd8765e0bc21738",
-      "mode": "exact",
-      "published_sha256": "0f8afd152e9b8b76f4fa88ce09167a5d40b06efbc900c5f01bd8765e0bc21738"
+      "mode": "adapted",
+      "published_sha256": "78ccd277078f3204fc760192c00137156aab088c2ba1f665c6e5bc77d60d7d1b",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "runner/run.sh",
       "destination": "deploy/job-autopilot/run.sh",
       "sha256": "99ded95880533e74e1434b6c42cd4043112e87c7a8d85c4b8f9212f2bee7b7f4",
-      "mode": "exact",
-      "published_sha256": "99ded95880533e74e1434b6c42cd4043112e87c7a8d85c4b8f9212f2bee7b7f4"
+      "mode": "adapted",
+      "published_sha256": "1fbe2d0a4c4793183aea536d88182c6b4955de2826d98f06f9c44b569a159252",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "runner/run.ps1",
       "destination": "deploy/job-autopilot/run.ps1",
       "sha256": "f2c149b68bc0a4c5d5d908ee94bc965af16db671cc939d0af14f52d974be0291",
-      "mode": "exact",
-      "published_sha256": "f2c149b68bc0a4c5d5d908ee94bc965af16db671cc939d0af14f52d974be0291"
+      "mode": "adapted",
+      "published_sha256": "fef477547d3db066a079e761ccabe587cb1c5a0ffb03aeb931f5325aba02c8d8",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "runner/CLAUDE.md",
       "destination": "deploy/job-autopilot/CLAUDE.md",
       "sha256": "ae9b7f963742a290accf319c5e18b4edf99a01c722629c7f4bb579a8083a8b44",
-      "mode": "exact",
-      "published_sha256": "ae9b7f963742a290accf319c5e18b4edf99a01c722629c7f4bb579a8083a8b44"
+      "mode": "adapted",
+      "published_sha256": "2b340da9ea971b44b654bafe6916640c94107cc521fa6304e954eedbbfdb2fa9",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/email-verification/scripts/collect_code.py",
       "destination": "deploy/email-verification/scripts/collect_code.py",
       "sha256": "bfe9f109ed2c48bd71c6429976e60f1d35ab0e24f1a9c615dd5ce553abd4c908",
-      "mode": "exact",
-      "published_sha256": "bfe9f109ed2c48bd71c6429976e60f1d35ab0e24f1a9c615dd5ce553abd4c908"
+      "mode": "adapted",
+      "published_sha256": "11114356415955fd8c843c3c67c734fdd25b5a21a1d0e10d70ae9260976b8560",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/email-verification/SKILL.md",
       "destination": "deploy/email-verification/SKILL.md",
       "sha256": "5e96d0f57ca3b23efaa789c8f52f363b390880b905f2cfa230a9da7d4cc6f7b9",
-      "mode": "redacted-template",
-      "published_sha256": "893bda44f1cd65b11793547d4c1ff63e047be5220fc5c47f40f801c4819c507c",
-      "changes": "Removed private VPS address, local access helper, personal application examples, and blanket authorization."
+      "mode": "adapted",
+      "published_sha256": "a40b1b98ac0be21cb895010a8c0a3f39b995f9d168727e206731f1c193059ed9",
+      "changes": "Removed private VPS address, local access helper, personal application examples, and blanket authorization.",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/run_daily_scan.sh",
       "destination": "deploy/run_daily_scan.sh",
       "sha256": "6b1de0a4d58d6d0cc5a482e538282617ae36602323232f6aac1c925ec0d4b6bf",
-      "mode": "exact",
-      "published_sha256": "6b1de0a4d58d6d0cc5a482e538282617ae36602323232f6aac1c925ec0d4b6bf"
+      "mode": "adapted",
+      "published_sha256": "3a94c8bd93efd1da082fcc77f90a043809cacae97d30fe9d5434392da4c55ca8",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/job-autopilot.service",
       "destination": "deploy/systemd/job-autopilot.service",
       "sha256": "fd7cf91f39fd7925be63afde0569bed42ae1d9d28968ca41af3e60e14060418f",
-      "mode": "exact",
-      "published_sha256": "fd7cf91f39fd7925be63afde0569bed42ae1d9d28968ca41af3e60e14060418f"
+      "mode": "adapted",
+      "published_sha256": "e5de482089bfad1a891e694825d792f3e23ddee69c1a282e101f97d58a0ba46c",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/job-autopilot.timer",
       "destination": "deploy/systemd/job-autopilot.timer",
       "sha256": "20722d108332eb73491b266c808086e979c9a8c84122fb03fbaa20f3788be2bb",
-      "mode": "exact",
-      "published_sha256": "20722d108332eb73491b266c808086e979c9a8c84122fb03fbaa20f3788be2bb"
+      "mode": "adapted",
+      "published_sha256": "a7f2c7680fb73b74dd59290ca19c027ada31f8824dc0b7a0a0be0ca4fa8167e7",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/jobhunt-email-verification.path",
       "destination": "deploy/systemd/jobhunt-email-verification.path",
       "sha256": "1d3a347f34224aba935ba74109c2bfb0fa887173aaf899ea0cb5eaf768de6dc3",
-      "mode": "exact",
-      "published_sha256": "1d3a347f34224aba935ba74109c2bfb0fa887173aaf899ea0cb5eaf768de6dc3"
+      "mode": "adapted",
+      "published_sha256": "14d8af868511018741a5f52423870664c8007a03ac8369e85355ac45a34789bb",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/jobhunt-email-verification.service",
       "destination": "deploy/systemd/jobhunt-email-verification.service",
       "sha256": "e2fc10f3f75084572b06c8b935566e12be399a696f25e4f0e65ab8ced74fc569",
-      "mode": "exact",
-      "published_sha256": "e2fc10f3f75084572b06c8b935566e12be399a696f25e4f0e65ab8ced74fc569"
+      "mode": "adapted",
+      "published_sha256": "e4580c8b8a9b5f5998ed77341ac1f34e205532c9ce2e4514a7773705dcfe53f6",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/jobhunter-scan.service",
       "destination": "deploy/systemd/jobhunter-scan.service",
       "sha256": "6e7076700748b973c5958b7851e6d5e20f5746e76ff329d80309378328af4cea",
-      "mode": "exact",
-      "published_sha256": "6e7076700748b973c5958b7851e6d5e20f5746e76ff329d80309378328af4cea"
+      "mode": "adapted",
+      "published_sha256": "2c869ce2bd9cf71163fd2f7f2b9b42b69973d2dd360c331146acd7d1d9cc644c",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "deploy/systemd/jobhunter-scan.timer",
       "destination": "deploy/systemd/jobhunter-scan.timer",
       "sha256": "80067916a0f2276595105db3a68ceb5ff9672e6fdbeb0a290fad1f46dbaae18d",
-      "mode": "exact",
-      "published_sha256": "80067916a0f2276595105db3a68ceb5ff9672e6fdbeb0a290fad1f46dbaae18d"
+      "mode": "adapted",
+      "published_sha256": "7bc580d08955e0be9b4b0f1549c6d793197732cb9f02a6dbb2186aeefefa5dc4",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "runner/prompt-vps.md",
       "destination": "deploy/job-autopilot/prompt-vps.example.md",
-      "mode": "redacted-template",
+      "mode": "adapted",
       "changes": "Removed candidate start-date answer, resume hash, private draft identifiers, and application outcomes.",
-      "published_sha256": "91f99b7e13a4adb686fc28c41fd293813720e318e863563fe1f4ef7476110c70",
-      "sha256": "edab3bb2826afae93c9d8218db3be813d835da6614c22ff036b1ee74b10cc682"
+      "published_sha256": "b4c189193c2e24fa58827791f996132d2e052044b8352272eaf489a187583e1e",
+      "sha256": "edab3bb2826afae93c9d8218db3be813d835da6614c22ff036b1ee74b10cc682",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/external_policy.json",
       "destination": "scripts/external_policy.example.json",
-      "mode": "redacted-template",
+      "mode": "adapted",
       "changes": "Replaced home postal code and cleared confirmed personal answers; operational limits retained.",
-      "published_sha256": "43a24bf97f6edfaa7d3e812411421223078e8f3617b66575a0e98a8e1c788927",
-      "sha256": "04a96207eb6299f889c6c4b8ebfe7125580c95d3982c788b460d767af516fd2d"
+      "published_sha256": "f10c023e96ff47b339a4ec024dccb359ceacda608d15dae080cf22ecc986e05c",
+      "sha256": "04a96207eb6299f889c6c4b8ebfe7125580c95d3982c788b460d767af516fd2d",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "targets/esoc_analyst.md",
@@ -299,5 +319,6 @@
     "browser profiles and credentials",
     "scratchpad configurations and per-application scripts",
     "private policy and live prompt"
-  ]
+  ],
+  "public_copy_changes": "See VPS-SYNC.md for privacy and security differences from the source deployment."
 }

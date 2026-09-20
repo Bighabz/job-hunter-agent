@@ -10,12 +10,14 @@ import time
 from external_guard import Guard, key, linkedin
 import scan_portals as sp
 
-RUNNER=Path('/opt/job-hunter/deploy/job-autopilot')
 SCRIPTS=Path(__file__).resolve().parent
+RUNNER=Path(os.environ.get('JOBHUNT_RUNNER', str(SCRIPTS.parent/'deploy'/'job-autopilot')))
 APPS=SCRIPTS.parent/'applications'
 
 
 def main():
+    RUNNER.mkdir(parents=True, exist_ok=True)
+    APPS.mkdir(parents=True, exist_ok=True)
     with (RUNNER/'batch.lock').open('w') as lock:
         try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         except BlockingIOError:print('Another application batch is active.');return 0
@@ -48,7 +50,7 @@ def main():
         env['DISPLAY']=':99'
         stdout=logs/(batch+'-applications.txt');stderr=logs/(batch+'-stderr.txt')
         prompt=(RUNNER/'prompt-vps.md').read_text()
-        # Always load Habib's permanent recording instruction for this run.
+        # Load the question-and-answer recording instructions for this run.
         prompt+='\n'+(SCRIPTS/'INTERVIEW-QA.md').read_text()+'\n'
         prompt+='\nRuntime batch: '+batch+'\nProgress before batch: '+json.dumps(guard.status(batch))+'\n'
         code=0

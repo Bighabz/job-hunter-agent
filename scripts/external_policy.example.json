@@ -1,6 +1,6 @@
 {
-  "daily_target": 100,
-  "batch_target": 15,
+  "daily_target": 5,
+  "batch_target": 1,
   "min_submit_interval_seconds": 120,
   "per_employer_daily_limit": 2,
   "timezone": "America/Los_Angeles",

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-set -u
-cd /opt/job-hunter/deploy/job-autopilot
-python3 /opt/job-hunter/scripts/external_batch.py
-code=$?
-chown -R clawd:clawd /home/jobhunter/jobhunter /opt/job-hunter/deploy/job-autopilot 2>/dev/null
-chown clawd:clawd /home/jobhunter/ClaudeVault/status/projects/jobhunt.md 2>/dev/null
-exit "$code"
+set -eu
+RUNNER_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="${JOBHUNT_ROOT:-$(cd -- "$RUNNER_DIR/../.." && pwd)}"
+export JOBHUNT_RUNNER="${JOBHUNT_RUNNER:-$RUNNER_DIR}"
+cd "$PROJECT_DIR"
+exec "${JOBHUNT_PYTHON:-python3}" "$PROJECT_DIR/scripts/external_batch.py"

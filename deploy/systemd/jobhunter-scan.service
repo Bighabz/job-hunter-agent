@@ -1,9 +1,11 @@
 [Unit]
-Description=JobHunter daily scan (09:00, python only)
-OnFailure=alert@%n.service
+Description=Job Hunter daily discovery
+After=network-online.target
+
 [Service]
-User=clawd
 Type=oneshot
-Environment=HOME=/home/jobhunter
-WorkingDirectory=/home/jobhunter/jobhunter
-ExecStart=/usr/bin/bash /home/jobhunter/jobhunter/run_daily_scan.sh
+User=jobhunter
+WorkingDirectory=/opt/job-hunter
+Environment=JOBHUNT_PYTHON=/opt/job-hunter/.venv/bin/python
+UMask=0077
+ExecStart=/usr/bin/bash /opt/job-hunter/deploy/run_daily_scan.sh

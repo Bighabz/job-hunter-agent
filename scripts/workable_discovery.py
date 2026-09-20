@@ -12,6 +12,7 @@ free on the search response.
 Output: a CLEAN vs FLAGGED split with the surrounding evidence text, same shape
 as the /tmp/sweep5.py stage-2 triage that worked for Greenhouse.
 """
+import ast
 import json, re, sys, time, urllib.parse, urllib.request
 
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
@@ -113,6 +114,19 @@ def triage(j):
     return flags, text
 
 
+def company_name(value):
+    """Read a board's company field as data, without executing its contents."""
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except (ValueError, TypeError):
+            try:
+                value = ast.literal_eval(value)
+            except (ValueError, SyntaxError, TypeError):
+                return None
+    return value.get('title') if isinstance(value, dict) else None
+
+
 def main():
     seen, clean, flagged = set(), [], []
     for q in QUERIES:
@@ -129,8 +143,7 @@ def main():
                 continue
             flags, text = triage(j)
             rec = {'title': j['title'],
-                   'company': (eval(j['company']) if isinstance(j['company'], str)
-                               else j['company']).get('title'),
+                   'company': company_name(j.get('company')),
                    'workplace': wp, 'locations': j.get('locations'),
                    'employmentType': j.get('employmentType'),
                    'url': j['url'], 'created': j.get('created'),
