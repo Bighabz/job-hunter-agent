@@ -1,11 +1,28 @@
 """Complete an application email OTP through its visible form, without logging codes."""
 import datetime as dt
 import json
+import os
 import re
+import tempfile
 import time
 from pathlib import Path
 
 EMAIL_NAMES = {'vardaspace': 'Varda Space Industries'}
+
+
+def write_private_json(path, data):
+    """Replace local handoff data atomically using an owner-only temporary file."""
+    path = Path(path)
+    fd, temporary = tempfile.mkstemp(prefix=path.name + '.', suffix='.tmp', dir=path.parent)
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as stream:
+            json.dump(data, stream, indent=2)
+        os.replace(temporary, path)
+        if os.name != 'nt':
+            path.chmod(0o600)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
 
 
 def employer_name(page, cfg):
@@ -51,8 +68,7 @@ def mark_used(path, item):
         if entry.get('gmail_message_id') == item.get('gmail_message_id') and entry.get('code') == item['code']:
             entry['used'] = True
             entry.pop('code', None)
-    path.write_text(json.dumps(data, indent=2))
-    path.chmod(0o600)
+    write_private_json(path, data)
 
 
 def complete_email_code(page, cfg, apps, submitted_at, timeout=240):
@@ -64,10 +80,10 @@ def complete_email_code(page, cfg, apps, submitted_at, timeout=240):
     path = apps / '_current_job_verification.json'
     request = apps / '_pending_email_verification.json'
     email_company = employer_name(page, cfg)
-    request.write_text(json.dumps({'company': cfg['company'], 'email_company': email_company,
+    write_private_json(request, {'company': cfg['company'], 'email_company': email_company,
         'expected_subject': 'Security code for your application to ' + email_company, 'title': cfg.get('title'),
         'url': page.url, 'requested_at_utc': dt.datetime.fromtimestamp(submitted_at,dt.timezone.utc).isoformat(),
-        'state': 'waiting-for-code', 'code_file': str(path)}, indent=2))
+        'state': 'waiting-for-code', 'code_file': str(path)})
     print('NEEDS_EMAIL_CODE: ' + cfg['company'] + ' | form remains open; read matching Gmail message into ' + str(path), flush=True)
     deadline = time.monotonic() + timeout
     item = None
@@ -96,6 +112,6 @@ def complete_email_code(page, cfg, apps, submitted_at, timeout=240):
         print('EMAIL_CODE_SUBMIT_UNKNOWN: no unambiguous form submit', flush=True)
         return False
     button.click()
-    request.write_text(json.dumps({'company':cfg['company'],'url':cfg['url'],'state':'code-entered-awaiting-confirmation'},indent=2))
+    write_private_json(request, {'company':cfg['company'],'url':cfg['url'],'state':'code-entered-awaiting-confirmation'})
     print('EMAIL_CODE_ENTERED: matching application resubmitted; checking confirmation', flush=True)
     return True

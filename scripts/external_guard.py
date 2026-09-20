@@ -15,11 +15,20 @@ APPS = Path(os.environ.get('JOBHUNT_APPLICATIONS', str(HERE.parent / 'applicatio
 POLICY = HERE / 'external_policy.json'
 
 
+def hostname_is(url, domain):
+    """Match an owned domain boundary, not text in a URL or lookalike hostname."""
+    try:
+        host = (urlsplit(url).hostname or '').lower().rstrip('.')
+    except ValueError:
+        return False
+    return host == domain or host.endswith('.' + domain)
+
+
 def key(url):
     p = urlsplit(url.strip())
     host = (p.hostname or '').lower()
     q = parse_qs(p.query)
-    if 'greenhouse.io' in host:
+    if host == 'greenhouse.io' or host.endswith('.greenhouse.io'):
         if q.get('for') and q.get('token'):
             return 'gh:' + q['for'][0].lower() + ':' + q['token'][0]
         m = re.search(r'/([^/]+)/jobs/(\d+)', p.path)

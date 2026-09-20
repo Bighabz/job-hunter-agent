@@ -10,7 +10,7 @@ Usage:
 import json, os, re, sys, time, pathlib, uuid
 from playwright.sync_api import sync_playwright
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / 'scripts'))
-from external_guard import Guard, validate_review, validate_personal_answers
+from external_guard import Guard, validate_review, validate_personal_answers, hostname_is
 from email_verification import complete_email_code
 from interview_qa import capture as capture_qa, outcome as qa_outcome
 
@@ -421,7 +421,7 @@ def main():
             # an undefined parsed size and the submit died on "File exceeds the maximum
             # upload size of 100MB" for a 54KB PDF. Driving the visible ATTACH RESUME/CV
             # control through the file-chooser event is Lever's real code path.
-            if 'workable.com' in url or 'lever.co' in url:
+            if hostname_is(url, 'workable.com') or hostname_is(url, 'lever.co'):
                 sels = ([f'label[for="{req_file_id}"]'] if req_file_id else []) + [
                     'label[for="resume-upload-input"]', 'text=ATTACH RESUME/CV',
                     'text=Choose file', '[data-ui="dropzone"]', 'label[for^="input_files_input"]']
@@ -471,7 +471,7 @@ def main():
         # On Workable the FileList alone is NOT evidence the upload registered (see the
         # resume block above), so demand the painted filename chip before spending a
         # guard reservation.
-        if ('workable.com' in url or 'lever.co' in url) and not state.get("textChip"):
+        if (hostname_is(url, 'workable.com') or hostname_is(url, 'lever.co')) and not state.get("textChip"):
             state["resumeChip"] = False
         log("=== STATE ===", state)
         page.screenshot(path=str(tmp / "prefill.png"))

@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import urllib.error
-from external_guard import Guard,key,validate_review,validate_personal_answers,ledger_records
+from external_guard import Guard,key,validate_review,validate_personal_answers,ledger_records,hostname_is
 from polite_http import PoliteJson,retry_seconds
 
 POLICY=json.loads((Path(__file__).parent/'external_policy.example.json').read_text())
@@ -21,6 +21,11 @@ class ExternalTests(unittest.TestCase):
     def test_linkedin_disabled_and_embed_dedup(self):
         self.assertEqual(key('https://boards.greenhouse.io/embed/job_app?for=varda&token=123'),key('https://job-boards.greenhouse.io/varda/jobs/123?gh_src=x'))
         self.assertIn('LinkedIn disabled',self.guard().check('https://www.linkedin.com/jobs/view/123','X','b'))
+    def test_provider_domains_reject_lookalikes_and_query_text(self):
+        self.assertTrue(hostname_is('https://apply.workable.com/example', 'workable.com'))
+        for url in ['https://fakeworkable.com/', 'https://workable.com.evil.example/', 'https://evil.example/?site=workable.com']:
+            self.assertFalse(hostname_is(url, 'workable.com'))
+        self.assertFalse(key('https://fakegreenhouse.io/acme/jobs/123').startswith('gh:'))
     def test_legacy_count_excludes_unconfirmed_and_linkedin(self):
         self.ledger.write_text('2026-09-12 | A | Role | External | applied - CONFIRMED | pay | https://a.test/jobs/1\n'
           '| 2026-09-12 | B | Role | External | applied - NOT-CONFIRMED | pay | https://b.test/jobs/2 |\n'

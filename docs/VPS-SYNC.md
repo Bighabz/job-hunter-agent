@@ -12,7 +12,8 @@ It includes the job scanners, application helper, duplicate checks, batch runner
 - The example policy starts with five applications per day and one per batch. The live server's private policy is not published.
 - Runner prompts contain reusable instructions instead of the owner's application history and personal requirements.
 - Documentation explains the current workflow. Scanner tests use the current location tag and explicit limits.
-- The Workable discovery helper parses company data without executing Python expressions. A regression test checks malicious input.
+- The Workable discovery helper parses company data without executing Python expressions. Regression tests check malicious input and misleading employer URLs.
+- Email-verification handoff files are replaced atomically and use owner-only permissions on Linux and macOS. Windows uses the containing folder's access controls; keep application data in your private user directory.
 
 The [manifest](vps-source-manifest.json) records source and public file hashes. Files marked `adapted` include privacy, portability, documentation, or example-configuration changes. These public-copy changes do not alter the running server.
 

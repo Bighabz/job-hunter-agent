@@ -12,8 +12,9 @@
       "source": "scripts/email_verification.py",
       "destination": "scripts/email_verification.py",
       "sha256": "55b8557b9bb41a56e7ee30f36777a271bfd1f2974f0527961aeec43462b25d64",
-      "mode": "exact",
-      "published_sha256": "55b8557b9bb41a56e7ee30f36777a271bfd1f2974f0527961aeec43462b25d64"
+      "mode": "adapted",
+      "published_sha256": "77384cbfc6cd6c352139731ba8e6ceb3e672bab189b4e82069a8bf7899fcdefe",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/external_batch.py",
@@ -27,8 +28,9 @@
       "source": "scripts/external_guard.py",
       "destination": "scripts/external_guard.py",
       "sha256": "3030ab91cd4df375bcdb853480d870c9c339c72a63ec3272466c582b0087e34b",
-      "mode": "exact",
-      "published_sha256": "3030ab91cd4df375bcdb853480d870c9c339c72a63ec3272466c582b0087e34b"
+      "mode": "adapted",
+      "published_sha256": "880c821848fb7287fa90b27b2c24fb7240f2d4b903c715e97de6718820baa8f1",
+      "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
       "source": "scripts/fixtures/li_search.html",
@@ -180,7 +182,7 @@
       "destination": "scratchpad/gh_apply.py",
       "sha256": "0f8afd152e9b8b76f4fa88ce09167a5d40b06efbc900c5f01bd8765e0bc21738",
       "mode": "adapted",
-      "published_sha256": "78ccd277078f3204fc760192c00137156aab088c2ba1f665c6e5bc77d60d7d1b",
+      "published_sha256": "31a71f12a860b146c4b142214d4fdf0b6f1fe763bf424af5748932a277fdb4e4",
       "public_copy_note": "Privacy, portable configuration, documentation, or reviewed security maintenance."
     },
     {
