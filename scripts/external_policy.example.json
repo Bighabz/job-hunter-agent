@@ -1,0 +1,16 @@
+{
+  "daily_target": 10,
+  "batch_target": 5,
+  "min_submit_interval_seconds": 120,
+  "per_employer_daily_limit": 2,
+  "timezone": "America/Los_Angeles",
+  "remote_preferred": true,
+  "home_zip": "YOUR_POSTAL_CODE",
+  "max_commute_miles": 15,
+  "work_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  "work_start": "09:00",
+  "work_end": "17:00",
+  "earliest_start_date": null,
+  "linkedin_enabled": false,
+  "confirmed_personal_answers": {}
+}
